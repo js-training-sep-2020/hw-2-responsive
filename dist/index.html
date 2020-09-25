@@ -11,52 +11,54 @@
 </head>
 
 <body>
-<aside id="weather-widget">
-  <div id="main-part" class="clearfix">
-    <div id="current-weather">
-      <p id="current-temp">12 °</p>
-      <p id="current-place">Paris, France</p>
-      <div id="current-wind">
-        <div id="wind-icon"></div>
-        <span id="wind-speed">14</span>
-        <span id="wind-unit">mph</span>
+<div class="demo-wrapper">
+  <aside class="weather-widget weather-widget_size_l">
+    <div class="weather-widget__main-info weather-widget__main-info_size_l">
+      <div class="weather-widget__current-day" id="current-day">
+        <p class="weather-widget__current-day-of-week" id="current-day-of-week">Friday</p>
+        <p class="weather-widget__current-date" id="current-date">August, 23rd</p>
+      </div>
+      <div id="current-weather">
+        <p id="current-temp">12 °</p>
+        <p id="current-place">Paris, France</p>
+        <div id="current-wind">
+          <div id="wind-icon"></div>
+          <span id="wind-speed">14</span>
+          <span id="wind-unit">mph</span>
+        </div>
       </div>
     </div>
-    <div id="current-day">
-      <p id="current-day-of-week">Friday</p>
-      <p id="current-date">August, 23rd</p>
+    <div id="carousel">
+      <div id="arrow-left" class="nav-arrows"></div>
+      <div id="forecast-container">
+        <div class="daily-forecast">
+          <p class="day-of-week">Monday</p>
+          <div id="rain-icon" class="weather-icons"></div>
+          <p class="temperature">10 °</p>
+        </div>
+        <div class="divider"></div>
+        <div class="daily-forecast">
+          <p class="day-of-week">Tuesday</p>
+          <div id="cloudy-icon" class="weather-icons"></div>
+          <p class="temperature">15 °</p>
+        </div>
+        <div class="divider"></div>
+        <div class="daily-forecast">
+          <p class="day-of-week">Wednesday</p>
+          <div id="sunny-icon" class="weather-icons"></div>
+          <p class="temperature">23 °</p>
+        </div>
+        <div class="divider"></div>
+        <div class="daily-forecast">
+          <p class="day-of-week">Thursday</p>
+          <div id="overcast-icon" class="weather-icons"></div>
+          <p class="temperature">18 °</p>
+        </div>
+      </div>
+      <div id="arrow-right" class="nav-arrows"></div>
     </div>
-  </div>
-  <div id="carousel">
-    <div id="arrow-left" class="nav-arrows"></div>
-    <div id="forecast-container">
-      <div class="daily-forecast">
-        <p class="day-of-week">Monday</p>
-        <div id="rain-icon" class="weather-icons"></div>
-        <p class="temperature">10 °</p>
-      </div>
-      <div class="divider"></div>
-      <div class="daily-forecast">
-        <p class="day-of-week">Tuesday</p>
-        <div id="cloudy-icon" class="weather-icons"></div>
-        <p class="temperature">15 °</p>
-      </div>
-      <div class="divider"></div>
-      <div class="daily-forecast">
-        <p class="day-of-week">Wednesday</p>
-        <div id="sunny-icon" class="weather-icons"></div>
-        <p class="temperature">23 °</p>
-      </div>
-      <div class="divider"></div>
-      <div class="daily-forecast">
-        <p class="day-of-week">Thursday</p>
-        <div id="overcast-icon" class="weather-icons"></div>
-        <p class="temperature">18 °</p>
-      </div>
-    </div>
-    <div id="arrow-right" class="nav-arrows"></div>
-  </div>
-</aside>
+  </aside>
+</div>
 
 
 <script src="bundle.js"></script>

@@ -1,0 +1,48 @@
+@mixin border-box () {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin typography () {
+  font-family: Lato, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+}
+
+.demo-wrapper {
+  //width: 696px;
+  width: 100%;
+}
+
+.weather-widget {
+  @include border-box ();
+  width: 100%;
+  max-width: 696px;
+  @include typography ();
+  background: no-repeat url("./img/bg_paris.jpg") #D8DEE2;
+  * {
+    @include border-box ();
+  }
+}
+
+.weather-widget_size_l {
+  height: 435px;
+}
+
+.weather-widget__main-info {
+  display: flex;
+}
+
+.weather-widget__main-info_size_l {
+  padding: 68px 60px;
+}
+
+.weather-widget__current-day {
+  margin: 0 26px 0 0;
+}
+
+.weather-widget__current-day-of-week {
+
+}
