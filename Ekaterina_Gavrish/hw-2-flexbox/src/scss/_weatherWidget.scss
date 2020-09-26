@@ -1,0 +1,101 @@
+@import "_variablesForWW";
+@font-face {
+  font-family: $FONTF;
+  src: $FONTFURL format("opentype");
+}
+
+@mixin backgrounds-and-transparency(
+  $color,
+  $tsColor,
+  $tsSize: $SHODOWSIZE,
+  $transparency: $SHODOWTRANSPARENCY
+) {
+  background-color: $color;
+  text-shadow: $tsSize rgba($tsColor, $transparency);
+}
+
+.wrapper {
+  width: $WIDTWRAPPER;
+  height: $HEIGHTWRAPPER;
+  background: $BGWRAPPER no-repeat center center fixed;
+  background-size: cover;
+}
+
+.weather-widget {
+  font-family: $FONTF;
+  font-size: $FONTSMEDIUM;
+  line-height: $LINEH;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $WHITE;
+  max-height: $HEIGHTWW;
+  width: $WIDTHFORIE;
+  max-width: $WIDTHWW;
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: $BOXSHADOWWW;
+  position: absolute;
+  margin: auto;
+  top: $TOPWW;
+  right: $RIGHTWW;
+  bottom: $BOTTOMWW;
+  left: $LEFTWW;
+  &__block {
+    height: $HEIGHTBLOCK;
+    width: $WIDTHBLOCK;
+    box-shadow: $BOXSHADOWBLOCK;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    &_first {
+      @include backgrounds-and-transparency($CYAN, $CYANFORSHODOW);
+    }
+    &_second {
+      @include backgrounds-and-transparency($GREENCYAN, $GREENCYANFORSHODOW);
+    }
+    &_third {
+      @include backgrounds-and-transparency($BLUE, $BLUEFORSHODOW);
+    }
+    &_fourth {
+      @include backgrounds-and-transparency($YELLOW, $YELLOWFORSHODOW);
+    }
+    &_fifth {
+      @include backgrounds-and-transparency($PINK, $PINKFORSHODOW);
+    }
+    &_sixth {
+      @include backgrounds-and-transparency($MAGENTA, $MAGENTAFORSHODOW);
+    }
+  }
+  &__img {
+    height: $HEIGHTPICTURE;
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    margin: $MARGINP;
+  }
+  &__list {
+    background-color: $DARKPINK;
+    display: flex;
+    justify-content: space-around;
+    height: $HEIGHTUL;
+    width: $WIDTHUL;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: $FONTSSMALL;
+    padding-top: $PADDINGTOPLI;
+    padding-bottom: $PADDINGBOTTOMLI;
+    &:first-child {
+      padding-left: $PADDINGLEFTRIGHTLI;
+    }
+    &:last-child {
+      padding-right: $PADDINGLEFTRIGHTLI;
+    }
+  }
+}
