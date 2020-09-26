@@ -1,0 +1,17 @@
+@import "_variablesForMedia";
+@media all and (max-width: 450px) {
+    .weather-widget {
+        font-size: $FONTSFORSMALLSCREEN;
+    }
+}
+
+@media all and (max-width: 615px) {
+    .weather-widget {
+        margin: $MARGINFORSMALLSCREEN;
+        max-height: $HEIGHTFORSMALLSCREEN;
+        &__block {
+            width: $WIDTHBLOCKFORSMALLSCREEN;
+            height: auto;
+        }
+    }
+}
