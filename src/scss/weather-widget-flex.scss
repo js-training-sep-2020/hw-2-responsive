@@ -18,6 +18,8 @@
   width: 100%;
 }
 
+// Small and basic widget (mobile first)
+
 .weather-widget {
   @include border-box();
   width: 100%;
@@ -30,7 +32,7 @@
 
 .weather-widget_size_s {
   height: 210px;
-  min-width: 148px;
+  min-width: 147px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), no-repeat url("./img/bg_paris.jpg") #D8DEE2;
   background-size: cover;
 }
@@ -51,8 +53,11 @@
 }
 
 .weather-widget__day-of-week {
-  padding-bottom: 4px;
   font-weight: 700;
+}
+
+.weather-widget__day-of-week_size_s {
+  padding-bottom: 4px;
 }
 
 .weather-widget__space {
@@ -107,6 +112,52 @@
 
 .weather-widget__carousel_display_none {
   display: none;
+}
+
+// Medium widget
+@media only screen and (min-width: 769px) {
+  .weather-widget_size_m {
+    height: 435px;
+    min-width: 351px;
+    background: no-repeat url("./img/bg_paris.jpg") #D8DEE2;
+  }
+
+  .weather-widget__main-info_size_m {
+    padding: 34px 30px 0;
+  }
+
+  .weather-widget__day-of-week_size_m {
+    padding-bottom: 2px;
+    margin: 6px 0 2px 0;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+  }
+
+  .weather-widget__date_size_m {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .weather-widget__space_26px {
+    width: 26px;
+  }
+
+  .weather-widget__temp_size_m {
+    margin-bottom: 1px;
+    font-size: 92px;
+  }
+
+  .weather-widget__place_size_m {
+    margin: 0 0 20px 4px;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+  }
+
+  .weather-widget__carousel_display_block {
+    display: block;
+  }
 }
 
 
