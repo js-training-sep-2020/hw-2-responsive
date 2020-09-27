@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Paris</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./reset.css">
   <link rel='stylesheet' href='weather-widget-flex.css'>
 </head>
 
 <body>
 <div class="demo-wrapper">
-  <aside class="weather-widget weather-widget_size_l">
-    <div class="weather-widget__main-info weather-widget__main-info_size_l">
-      <div class="weather-widget__current-day" id="current-day">
-        <p class="weather-widget__current-day-of-week" id="current-day-of-week">Friday</p>
-        <p class="weather-widget__current-date" id="current-date">August, 23rd</p>
+  <aside class="weather-widget weather-widget_size_s">
+    <div class="weather-widget__main-info weather-widget__main-info_size_s">
+      <div class="weather-widget__day" id="current-day">
+        <p class="weather-widget__day-of-week" id="current-day-of-week">Friday</p>
+        <p class="weather-widget__date" id="current-date">August, 23rd</p>
       </div>
       <div id="current-weather">
-        <p id="current-temp">12 °</p>
-        <p id="current-place">Paris, France</p>
-        <div id="current-wind">
-          <div id="wind-icon"></div>
-          <span id="wind-speed">14</span>
-          <span id="wind-unit">mph</span>
+        <p class="weather-widget__temp weather-widget__temp_size_s">12 °</p>
+        <p class="weather-widget__place weather-widget__place_size_s">Paris, France</p>
+        <div class="weather-widget__wind" id="current-wind">
+          <div class="weather-widget__wind-icon" id="wind-icon"></div>
+          <span class="weather-widget__wind-speed" id="wind-speed">14</span>
+          <span class="weather-widget__wind-unit" id="wind-unit">mph</span>
         </div>
       </div>
     </div>
-    <div id="carousel">
+    <div class="carousel weather-widget__carousel weather-widget__carousel_display_none" id="carousel">
       <div id="arrow-left" class="nav-arrows"></div>
       <div id="forecast-container">
         <div class="daily-forecast">
