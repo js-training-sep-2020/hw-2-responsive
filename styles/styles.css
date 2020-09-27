@@ -1,17 +1,137 @@
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
 body {
   font-family: "Lato";
 	color: #ffffff;
   background-image: linear-gradient( #b6b7bc, #2d3040);
 	height: 100%;
 }
-.sidebar {
-  width:
-}
-.container: {
-  max-width: 800px;
+.main_container {
+  max-width: 700px;
   margin: 0 auto;
-  background-image: url(../img/paris.png);
+  padding: 50px;
 }
-.widget__rowbottom {
-  display:grid;
+.widget_container {
+  margin: 0 auto;
+  position: relative;
+	background-image: url(../images/paris.png);
+	height: 435px;
+	max-width: 695px;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.date_temperature_block {
+  display: flex;
+  justify-content: flex-end;
+  height: 152px;
+  padding: 80px 50px 50px 50px;
+  text-align: center;
+  }
+.current_day {
+  font-size: 30px;
+}
+.date {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0px 32px 16px;
+}
+.temperature {
+  display: flex;
+  flex-direction: column;
+}
+.city {
+font-size: 22px;
+font-weight: 300;
+padding: 0px 10px 17px 0px;
+}
+.current_day {
+  font-size: 30px;
+  font-weight: 300;
+}
+.current_month {
+  font-size: 15px;
+  font-weight: 300;
+}
+.current_date {
+  font-size: 15px;
+  font-weight: 300;
+}
+.twelve {
+  font-size: 95px;
+  line-height: 95px;
+  color: #ffffff;
+  font-weight: 900;
+  font-family: "Lato";
+}
+.speed {
+  font-size: 25px;
+  line-height: 16px;
+  font-weight: bold;
+}
+.mph {
+  font-size: 14px;
+  font-weight: bold;
+}
+.days {
+  position: relative;
+  display: flex;
+}
+.day {
+  padding: 18px 32px 16px;
+  position: relative;
+}
+.day .monday {
+  display: flex;
+  flex-direction: column;
+}
+.rain_icon_block {
+  padding: 3px;
+}
+.sunny_icon_block {
+  padding: 4px;
+}
+.cloudy_icon_block {
+  padding: 5px 0 13px;
+}
+.overcast_icon_block {
+  padding: 4px;
+}
+.prev, .next {
+  padding: 40px;
+  position: relative;}
+.day::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  height: 80%;
+  width: 1px;
+}
+.day:last-child:after {
+  content: none;
+}
+.second_day {
+  padding-bottom: 5px;
+}
+.bottom_week_arrows_block {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  font-size: 15px;
+  width: 696px;
+  height: 108px;
+  background-color: rgba(0,0,0,0.3);
+  }
+.day{
+  padding: 18px 32px 16px;
 }
