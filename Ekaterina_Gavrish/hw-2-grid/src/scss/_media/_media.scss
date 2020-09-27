@@ -1,0 +1,42 @@
+@import "_variablesForMedia";
+@media all and (max-width: 450px) {
+  .weather-widget {
+    font-size: $FONTSFORSMALLSCREEN;
+  }
+}
+
+@media all and (max-width: 615px) {
+  .weather-widget {
+    margin: $MARGINFORSMALLSCREEN;
+    max-height: $HEIGHTFORSMALLSCREEN;
+    grid-template-rows: $GRIDROWS;
+    grid-template-columns: $GRIDCOLUMNS;
+
+    &__block {
+      &_first {
+        -ms-grid-column: $GRIDCOLUMNFIRST;
+        -ms-grid-row: $GRIDROWFIRST;
+      }
+      &_second {
+        -ms-grid-column: $GRIDCOLUMNSECOND;
+        -ms-grid-row: $GRIDROWFIRST;
+      }
+      &_third {
+        -ms-grid-column: $GRIDCOLUMNFIRST;
+        -ms-grid-row: $GRIDROWSECOND;
+      }
+      &_fourth {
+        -ms-grid-column: $GRIDCOLUMNSECOND;
+        -ms-grid-row: $GRIDROWSECOND;
+      }
+      &_fifth {
+        -ms-grid-column: $GRIDCOLUMNFIRST;
+        -ms-grid-row: $GRIDROWTHIRD;
+      }
+      &_sixth {
+        -ms-grid-column: $GRIDCOLUMNSECOND;
+        -ms-grid-row: $GRIDROWTHIRD;
+      }
+    }
+  }
+}

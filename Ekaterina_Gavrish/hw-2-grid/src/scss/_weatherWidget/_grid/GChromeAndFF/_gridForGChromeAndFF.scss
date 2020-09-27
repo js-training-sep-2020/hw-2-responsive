@@ -1,0 +1,43 @@
+@import "_variablesForGChromeAndFF";
+
+.weather-widget {
+  display: grid;
+  grid-template-rows: $GRIDROWSWW;
+  grid-template-columns: $GRIDCOLUMNSWW;
+
+  &__block {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: $GRIDROWSBLOCK;
+    grid-row-gap: $GRIDROWGAPBLOCK;
+    &_fifth {
+      grid-row-gap: $GRIDROWGAPBLOCKFORFIFTH;
+      grid-template-rows: $GRIDROWSBLOCKFORFIFTH;
+    }
+  }
+
+  &__img {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+  }
+
+  &__list {
+    display: grid;
+    width: $WIDTHUL;
+    grid-template-columns: $GRIDCOLUMNSUL;
+  }
+}
+
+.weather-list {
+  &__item {
+    display: grid;
+    grid-template-rows: $GRIDROWSLI;
+    justify-items: center;
+    align-items: end;
+    grid-row-gap: $GRIDROWGAPLI;
+    &:first-child {
+      grid-column-start: $GRIDCOLUMNSECOND;
+    }
+  }
+}

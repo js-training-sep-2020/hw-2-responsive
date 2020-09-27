@@ -1,4 +1,7 @@
 @import "_variablesForWW";
+@import "_grid/GChromeAndFF/_gridForGChromeAndFF";
+@import "_grid/IE/_gridForIE";
+
 @font-face {
   font-family: $FONTF;
   src: $FONTFURL format("opentype");
@@ -28,10 +31,9 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $WHITE;
-  height: $HEIGHTWW;
-  width: $WIDTHWW;
-  display: flex;
-  flex-flow: row wrap;
+  max-height: $HEIGHTWW;
+  width: $WIDTHFORIE;
+  max-width: $WIDTHWW;
   box-shadow: $BOXSHADOWWW;
   position: absolute;
   margin: auto;
@@ -39,15 +41,9 @@
   right: $RIGHTWW;
   bottom: $BOTTOMWW;
   left: $LEFTWW;
+
   &__block {
-    height: $HEIGHTBLOCK;
-    width: $WIDTHBLOCK;
     box-shadow: $BOXSHADOWBLOCK;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    flex-direction: column;
-    justify-content: center;
     &_first {
       @include backgrounds-and-transparency($CYAN, $CYANFORSHODOW);
     }
@@ -67,34 +63,14 @@
       @include backgrounds-and-transparency($MAGENTA, $MAGENTAFORSHODOW);
     }
   }
-  &__img {
-    height: $HEIGHTPICTURE;
-    display: flex;
-    align-items: center;
-  }
-  &__text {
-    margin: $MARGINP;
-  }
+
   &__list {
     background-color: $DARKPINK;
-    display: flex;
-    justify-content: space-around;
-    height: $HEIGHTUL;
-    width: $WIDTHUL;
   }
+}
+
+.weather-list {
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     font-size: $FONTSSMALL;
-    padding-top: $PADDINGTOPLI;
-    padding-bottom: $PADDINGBOTTOMLI;
-    &:first-child {
-      padding-left: $PADDINGLEFTRIGHTLI;
-    }
-    &:last-child {
-      padding-right: $PADDINGLEFTRIGHTLI;
-    }
   }
 }

@@ -1,0 +1,28 @@
+// Для главного контейнера Weather Widget (WW)
+$GRIDROWSWW: 1fr 1fr;
+$GRIDCOLUMNSWW: 1fr 1fr 1fr;
+
+// Для для блоков с погодой (BLOCK)
+$GRIDROWSBLOCK: 2fr 1fr;
+$GRIDROWSBLOCKFORFIFTH: 1fr 1fr;
+$GRIDROWGAPBLOCK: 12%;
+$GRIDROWGAPBLOCKFORFIFTH: 5%;
+
+// Для списка (UL)
+$GRIDCOLUMNSUL: 24px 1fr 1fr 1fr 1fr 24px;
+$WIDTHUL: 100%;
+
+// Для ячейки списка (LI)
+$GRIDROWSLI: 2fr 1fr 1fr 1fr;
+$GRIDROWGAPLI: 5%;
+
+// Для позиции блоков
+$GRIDCOLUMNFIRST: 1;
+$GRIDCOLUMNSECOND: 2;
+$GRIDCOLUMNTHIRD: 3;
+$GRIDCOLUMNFOURTH: 4;
+$GRIDCOLUMNFIFTH: 5;
+$GRIDROWFIRST: 1;
+$GRIDROWSECOND: 2;
+$GRIDROWTHIRD: 3;
+$GRIDROWFIFTH: 5;
