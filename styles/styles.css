@@ -1,23 +1,17 @@
-
-html {
-  height: 100%;
-  overflow: hidden;
-}
 body {
   font-family: "Lato";
 	color: #ffffff;
   background-image: linear-gradient( #b6b7bc, #2d3040);
 	height: 100%;
 }
+.sidebar {
+  width:
+}
 .container: {
-margin: 0 auto;
-position: relative;
-background-image: url(../images/paris.png);
-height: 435px;
-max-width: 695px;
-width: 100%;
-box-sizing: border-box;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  background-image: url(../img/paris.png);
+}
+.widget__rowbottom {
+  display:grid;
 }
