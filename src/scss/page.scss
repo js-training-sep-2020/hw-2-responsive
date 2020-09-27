@@ -1,0 +1,76 @@
+// .some-content is for demonstration only
+// Have to be removed in real project
+.some-content {
+  visibility: hidden;
+}
+
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+}
+
+.page {
+  @include border-box();
+  margin: 0;
+  * {
+    @include border-box();
+  }
+}
+
+.page__row {
+  min-height: 16px;
+}
+
+// Small smartphones (mobile first)
+
+[class*="col-"] {
+  float: left;
+  width: 100%;
+}
+
+// Tablets and large smartphones
+
+@media only screen and (min-width: 481px) {
+  [class*="col-"] {
+    padding: 0 8px;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+}
+
+// Laptops, larger tablets in landscape, small desktops
+
+@media only screen and (min-width: 769px) {
+  .col-m-6 {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .page_l {
+    margin: 0 auto;
+    max-width: 2120px;
+  }
+
+  .col-l-4 {
+    width: 33.33%;
+  }
+
+  .col-l-8 {
+    width: 66.66%;
+  }
+}
