@@ -1,0 +1,13 @@
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.carousel {
+  @include border-box();
+  height: 108px;
+  width: 100%;
+  text-align: center;
+  padding: 0 56px;
+  background: rgba(0, 0, 0, 0.3);
+}

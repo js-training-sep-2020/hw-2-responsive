@@ -1,5 +1,6 @@
 @import "reset";
 @import "page";
+@import "carousel";
 
 @mixin border-box() {
   -webkit-box-sizing: border-box;
@@ -120,6 +121,7 @@
   }
 
   .weather-widget__main-info_size_m {
+    height: 327px;
     padding: 34px 30px 0;
   }
 
