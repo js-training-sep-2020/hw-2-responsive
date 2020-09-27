@@ -160,15 +160,10 @@
   }
 }
 
+// Large (original) widget
 
-/* ======================================== */
-/*  Large                                */
-/* ======================================== */
-
-.weather-widget_size_l {
-  height: 435px;
-}
-
-.weather-widget__main-info_size_l {
-  padding: 68px 60px;
+@media only screen and (min-width: 1280px) {
+  .weather-widget__main-info_size_l {
+    padding: 68px 60px 0;
+  }
 }
