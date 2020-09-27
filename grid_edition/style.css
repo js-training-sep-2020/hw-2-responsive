@@ -33,7 +33,7 @@
 }
 
 .container {
-    background-color: #4e5860;
+    background: linear-gradient(315deg, rgb(149, 214, 134), rgb(238, 169, 149));
     width: 100vw;
     height: 100vh;
     display: flex;
