@@ -1,4 +1,5 @@
 @import "_variablesForWW";
+@import "_flexbox/_flexbox";
 @font-face {
   font-family: $FONTF;
   src: $FONTFURL format("opentype");
@@ -31,8 +32,6 @@
   max-height: $HEIGHTWW;
   width: $WIDTHFORIE;
   max-width: $WIDTHWW;
-  display: flex;
-  flex-flow: row wrap;
   box-shadow: $BOXSHADOWWW;
   position: absolute;
   margin: auto;
@@ -44,11 +43,6 @@
     height: $HEIGHTBLOCK;
     width: $WIDTHBLOCK;
     box-shadow: $BOXSHADOWBLOCK;
-    display: flex;
-    align-items: center;
-    align-content: space-between;
-    flex-direction: column;
-    justify-content: center;
     &_first {
       @include backgrounds-and-transparency($CYAN, $CYANFORSHODOW);
     }
@@ -70,24 +64,16 @@
   }
   &__img {
     height: $HEIGHTPICTURE;
-    display: flex;
-    align-items: center;
   }
   &__text {
     margin: $MARGINP;
   }
   &__list {
     background-color: $DARKPINK;
-    display: flex;
-    justify-content: space-around;
     height: $HEIGHTUL;
     width: $WIDTHUL;
   }
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     font-size: $FONTSSMALL;
     padding-top: $PADDINGTOPLI;
     padding-bottom: $PADDINGBOTTOMLI;

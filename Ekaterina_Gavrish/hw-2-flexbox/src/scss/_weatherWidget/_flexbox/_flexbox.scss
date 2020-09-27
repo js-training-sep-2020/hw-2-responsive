@@ -1,0 +1,26 @@
+.weather-widget {
+  display: flex;
+  flex-flow: row wrap;
+  &__block {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
