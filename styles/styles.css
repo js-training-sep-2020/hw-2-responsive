@@ -4,20 +4,18 @@ html {
   overflow: hidden;
 }
 body {
-  font-family: "Lato";
-	color: #ffffff;
   background-image: linear-gradient( #b6b7bc, #2d3040);
 	height: 100%;
 }
-.main_container {
+.container {
   max-width: 700px;
   margin: 0 auto;
   padding: 50px;
 }
-.widget_container {
+.widget {
   margin: 0 auto;
   position: relative;
-	background-image: url(../images/paris.png);
+	background-image: url(../img/paris.png);
 	height: 435px;
 	max-width: 695px;
 	width: 100%;
@@ -25,85 +23,72 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+  font-family: "Lato";
+  color: #ffffff;
 }
-.date_temperature_block {
+.widget__temperature {
   display: flex;
   justify-content: flex-end;
   height: 152px;
   padding: 80px 50px 50px 50px;
   text-align: center;
   }
-.current_day {
-  font-size: 30px;
-}
-.date {
+
+.widget__date {
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 0px 32px 16px;
 }
-.temperature {
+.widget__info{
   display: flex;
   flex-direction: column;
 }
-.city {
+.widget__city {
 font-size: 22px;
 font-weight: 300;
 padding: 0px 10px 17px 0px;
 }
-.current_day {
+.widget__weekday {
   font-size: 30px;
   font-weight: 300;
 }
-.current_month {
+.widget__month {
   font-size: 15px;
   font-weight: 300;
 }
-.current_date {
+.widget__today {
   font-size: 15px;
   font-weight: 300;
 }
-.twelve {
+.widget__value {
   font-size: 95px;
   line-height: 95px;
   color: #ffffff;
   font-weight: 900;
   font-family: "Lato";
 }
-.speed {
+.widget__speed {
   font-size: 25px;
   line-height: 16px;
   font-weight: bold;
 }
-.mph {
+.widget__mph {
   font-size: 14px;
   font-weight: bold;
 }
-.days {
+.widget__days {
   position: relative;
   display: flex;
 }
 .day {
   padding: 18px 32px 16px;
   position: relative;
-}
-.day .monday {
   display: flex;
   flex-direction: column;
 }
-.rain_icon_block {
-  padding: 3px;
-}
-.sunny_icon_block {
-  padding: 4px;
-}
-.cloudy_icon_block {
-  padding: 5px 0 13px;
-}
-.overcast_icon_block {
-  padding: 4px;
-}
-.prev, .next {
+
+.widget__prev, .widget__next {
   padding: 40px;
   position: relative;}
 .day::after {
@@ -118,20 +103,15 @@ padding: 0px 10px 17px 0px;
 .day:last-child:after {
   content: none;
 }
-.second_day {
-  padding-bottom: 5px;
-}
-.bottom_week_arrows_block {
+
+.widget__weathercast {
   display: flex;
   position: relative;
   justify-content: space-around;
   flex-direction: row;
   text-align: center;
   font-size: 15px;
-  width: 696px;
+  width: 691px;
   height: 108px;
   background-color: rgba(0,0,0,0.3);
   }
-.day{
-  padding: 18px 32px 16px;
-}
