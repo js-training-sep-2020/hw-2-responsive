@@ -1,10 +1,12 @@
 .carousel {
   @include box-sizing(border-box);
-  @include flex();
+  @include grid;
+  grid-template-columns: auto 1fr auto;
+  -ms-grid-columns: auto 1fr auto;
+  -ms-grid-rows: auto;
   height: 108px;
   width: 100%;
   text-align: center;
-  padding: 0 56px;
   background: rgba(0, 0, 0, 0.3);
 
   * {
@@ -25,22 +27,40 @@
 
 .carousel__nav-arrows_left {
   background: center no-repeat url("../img/icon_arrow_left.png");
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
 }
 
 .carousel__nav-arrows_right {
   background: center no-repeat url("../img/icon_arrow_right.png");
+  -ms-grid-column: 3;
+  -ms-grid-row: 1;
 }
 
 .carousel__forecast-container {
-  @include flex();
-  @include flex-flow-row(nowrap);
-  @include flex-start;
+  @include grid;
+  grid-template-columns: repeat(3, auto 1px) auto;
+  -ms-grid-columns: auto 1px auto 1px auto 1px auto;
   width: 100%;
   overflow: hidden;
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
 }
 
 .carousel__daily-forecast {
-  @include flex-grow(1);
+  -ms-grid-row: 1;
+  &:nth-child(1) {
+    -ms-grid-column: 1;
+  }
+  &:nth-child(2) {
+    -ms-grid-column: 3;
+  }
+  &:nth-child(3) {
+    -ms-grid-column: 5;
+  }
+  &:nth-child(4) {
+    -ms-grid-column: 7;
+  }
 }
 
 .carousel__divider {
@@ -48,6 +68,16 @@
   height: 80px;
   margin: 14px 0;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  -ms-grid-row: 1;
+  &:nth-child(1) {
+    -ms-grid-column: 2;
+  }
+  &:nth-child(2) {
+    -ms-grid-column: 4;
+  }
+  &:nth-child(3) {
+    -ms-grid-column: 6;
+  }
 }
 
 .carousel__day-of-week {

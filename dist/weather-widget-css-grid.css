@@ -102,13 +102,14 @@ body {
 .carousel {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  -ms-grid-columns: auto 1fr auto;
+  -ms-grid-rows: auto;
   height: 108px;
   width: 100%;
   text-align: center;
-  padding: 0 56px;
   background: rgba(0, 0, 0, 0.3); }
   .carousel * {
     -webkit-box-sizing: border-box;
@@ -124,35 +125,48 @@ body {
   cursor: pointer; }
 
 .carousel__nav-arrows_left {
-  background: center no-repeat url(937967d47c4d111df160a4768fc4fb73.png); }
+  background: center no-repeat url(937967d47c4d111df160a4768fc4fb73.png);
+  -ms-grid-column: 1;
+  -ms-grid-row: 1; }
 
 .carousel__nav-arrows_right {
-  background: center no-repeat url(b6766c65d34dd82dd6289e055b90aebe.png); }
+  background: center no-repeat url(b6766c65d34dd82dd6289e055b90aebe.png);
+  -ms-grid-column: 3;
+  -ms-grid-row: 1; }
 
 .carousel__forecast-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(3, auto 1px) auto;
+  -ms-grid-columns: auto 1px auto 1px auto 1px auto;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  -ms-grid-column: 2;
+  -ms-grid-row: 1; }
 
 .carousel__daily-forecast {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1; }
+  -ms-grid-row: 1; }
+  .carousel__daily-forecast:nth-child(1) {
+    -ms-grid-column: 1; }
+  .carousel__daily-forecast:nth-child(2) {
+    -ms-grid-column: 3; }
+  .carousel__daily-forecast:nth-child(3) {
+    -ms-grid-column: 5; }
+  .carousel__daily-forecast:nth-child(4) {
+    -ms-grid-column: 7; }
 
 .carousel__divider {
   width: 0;
   height: 80px;
   margin: 14px 0;
-  border-left: 1px solid rgba(255, 255, 255, 0.5); }
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  -ms-grid-row: 1; }
+  .carousel__divider:nth-child(1) {
+    -ms-grid-column: 2; }
+  .carousel__divider:nth-child(2) {
+    -ms-grid-column: 4; }
+  .carousel__divider:nth-child(3) {
+    -ms-grid-column: 6; }
 
 .carousel__day-of-week {
   padding: 10px 4px 0; }
