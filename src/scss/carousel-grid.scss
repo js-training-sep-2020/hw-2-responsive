@@ -1,3 +1,5 @@
+@import "mixins";
+
 .carousel {
   @include box-sizing(border-box);
   @include grid;
@@ -40,7 +42,7 @@
 .carousel__forecast-container {
   @include grid;
   grid-template-columns: repeat(3, auto 1px) auto;
-  -ms-grid-columns: auto 1px auto 1px auto 1px auto;
+  -ms-grid-columns: minmax(min-content, 1fr) 1px minmax(min-content, 1fr) 1px minmax(min-content, 1fr) 1px minmax(min-content, 1fr);
   width: 100%;
   overflow: hidden;
   -ms-grid-column: 2;
