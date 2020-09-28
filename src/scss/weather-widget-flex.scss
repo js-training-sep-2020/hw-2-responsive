@@ -1,11 +1,7 @@
 @import "reset";
+@import "mixins";
 @import "page";
-@import "carousel";
-
-@mixin box-sizing($val) {
-  -webkit-box-sizing: $val;
-  box-sizing: $val;
-}
+@import "carousel-flex";
 
 @mixin typography() {
   font-family: Lato, Arial, sans-serif;
@@ -13,25 +9,6 @@
   font-size: 16px;
   line-height: 1;
   color: white;
-}
-
-@mixin flex() {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@mixin flex-flow-row($wrap) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row $wrap;
-  flex-flow: row $wrap;
-}
-
-@mixin flex-end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
 }
 
 // Small and basic widget (mobile first)
