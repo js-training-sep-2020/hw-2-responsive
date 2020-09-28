@@ -190,18 +190,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_weather_widget_flex_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/weather-widget-flex.scss */ \"./src/scss/weather-widget-flex.scss\");\n/* harmony import */ var _scss_weather_widget_flex_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_weather_widget_flex_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _img_bg_paris_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/bg_paris.jpg */ \"./src/img/bg_paris.jpg\");\n/* harmony import */ var _img_icon_arrow_left_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/icon_arrow_left.png */ \"./src/img/icon_arrow_left.png\");\n/* harmony import */ var _img_icon_arrow_right_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/icon_arrow_right.png */ \"./src/img/icon_arrow_right.png\");\n/* harmony import */ var _img_icon_weather_cloudy_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/icon_weather_cloudy.png */ \"./src/img/icon_weather_cloudy.png\");\n/* harmony import */ var _img_icon_weather_overcast_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/icon_weather_overcast.png */ \"./src/img/icon_weather_overcast.png\");\n/* harmony import */ var _img_icon_weather_rain_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/icon_weather_rain.png */ \"./src/img/icon_weather_rain.png\");\n/* harmony import */ var _img_icon_weather_sunny_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/icon_weather_sunny.png */ \"./src/img/icon_weather_sunny.png\");\n/* harmony import */ var _img_icon_wind_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/icon_wind.png */ \"./src/img/icon_wind.png\");\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_weather_widget_grid_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/weather-widget-grid.scss */ \"./src/scss/weather-widget-grid.scss\");\n/* harmony import */ var _scss_weather_widget_grid_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_weather_widget_grid_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _img_bg_paris_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/bg_paris.jpg */ \"./src/img/bg_paris.jpg\");\n/* harmony import */ var _img_icon_arrow_left_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/icon_arrow_left.png */ \"./src/img/icon_arrow_left.png\");\n/* harmony import */ var _img_icon_arrow_right_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./img/icon_arrow_right.png */ \"./src/img/icon_arrow_right.png\");\n/* harmony import */ var _img_icon_weather_cloudy_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./img/icon_weather_cloudy.png */ \"./src/img/icon_weather_cloudy.png\");\n/* harmony import */ var _img_icon_weather_overcast_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./img/icon_weather_overcast.png */ \"./src/img/icon_weather_overcast.png\");\n/* harmony import */ var _img_icon_weather_rain_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./img/icon_weather_rain.png */ \"./src/img/icon_weather_rain.png\");\n/* harmony import */ var _img_icon_weather_sunny_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./img/icon_weather_sunny.png */ \"./src/img/icon_weather_sunny.png\");\n/* harmony import */ var _img_icon_wind_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./img/icon_wind.png */ \"./src/img/icon_wind.png\");\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/scss/weather-widget-flex.scss":
+/***/ "./src/scss/weather-widget-grid.scss":
 /*!*******************************************!*\
-  !*** ./src/scss/weather-widget-flex.scss ***!
+  !*** ./src/scss/weather-widget-grid.scss ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/scss/weather-widget-flex.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/scss/weather-widget-grid.scss?");
 
 /***/ })
 
