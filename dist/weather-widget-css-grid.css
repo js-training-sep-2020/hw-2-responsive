@@ -206,7 +206,10 @@ body {
   background-size: cover; }
 
 .weather-widget__main-info {
+  display: -ms-grid;
   display: grid;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end; }
 
 .weather-widget__main-info_size_s {

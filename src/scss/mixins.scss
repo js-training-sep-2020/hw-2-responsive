@@ -33,3 +33,14 @@
   -ms-flex-positive: $val;
   flex-grow: $val;
 }
+
+@mixin grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin grid-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}

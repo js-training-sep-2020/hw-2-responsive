@@ -34,8 +34,8 @@
 }
 
 .weather-widget__main-info {
-  display: grid;
-  justify-content: end;
+  @include grid;
+  @include grid-end;
 }
 
 .weather-widget__main-info_size_s {
