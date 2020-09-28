@@ -148,11 +148,11 @@ body {
   -ms-grid-row: 1; }
   .carousel__daily-forecast:nth-child(1) {
     -ms-grid-column: 1; }
-  .carousel__daily-forecast:nth-child(2) {
-    -ms-grid-column: 3; }
   .carousel__daily-forecast:nth-child(3) {
+    -ms-grid-column: 3; }
+  .carousel__daily-forecast:nth-child(5) {
     -ms-grid-column: 5; }
-  .carousel__daily-forecast:nth-child(4) {
+  .carousel__daily-forecast:nth-child(7) {
     -ms-grid-column: 7; }
 
 .carousel__divider {
@@ -161,11 +161,11 @@ body {
   margin: 14px 0;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   -ms-grid-row: 1; }
-  .carousel__divider:nth-child(1) {
-    -ms-grid-column: 2; }
   .carousel__divider:nth-child(2) {
+    -ms-grid-column: 2; }
+  .carousel__divider:nth-child(4) {
     -ms-grid-column: 4; }
-  .carousel__divider:nth-child(3) {
+  .carousel__divider:nth-child(6) {
     -ms-grid-column: 6; }
 
 .carousel__day-of-week {
