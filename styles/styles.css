@@ -33,7 +33,6 @@ body {
   padding: 80px 50px 50px 50px;
   text-align: center;
   }
-
 .widget__date {
   display: flex;
   flex-direction: column;
@@ -87,10 +86,10 @@ padding: 0px 10px 17px 0px;
   display: flex;
   flex-direction: column;
 }
-
 .widget__prev, .widget__next {
   padding: 40px;
-  position: relative;}
+  position: relative;
+}
 .day::after {
   content: "";
   position: absolute;
@@ -103,7 +102,6 @@ padding: 0px 10px 17px 0px;
 .day:last-child:after {
   content: none;
 }
-
 .widget__weathercast {
   display: flex;
   position: relative;
@@ -111,7 +109,7 @@ padding: 0px 10px 17px 0px;
   flex-direction: row;
   text-align: center;
   font-size: 15px;
-  width: 691px;
+  width: 100%;
   height: 108px;
   background-color: rgba(0,0,0,0.3);
   }
