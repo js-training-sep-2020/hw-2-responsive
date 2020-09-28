@@ -4,9 +4,9 @@
   visibility: hidden;
 }
 
-@mixin border-box() {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+@mixin box-sizing($val) {
+  -webkit-box-sizing: $val;
+  box-sizing: $val;
 }
 
 .clearfix:after {
@@ -18,10 +18,10 @@
 }
 
 .page {
-  @include border-box();
+  @include box-sizing(border-box);
   margin: 0;
   * {
-    @include border-box();
+    @include box-sizing(border-box);
   }
 }
 

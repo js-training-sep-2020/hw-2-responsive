@@ -2,9 +2,9 @@
 @import "page";
 @import "carousel";
 
-@mixin border-box() {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+@mixin box-sizing($val) {
+  -webkit-box-sizing: $val;
+  box-sizing: $val;
 }
 
 @mixin typography() {
@@ -18,12 +18,12 @@
 // Small and basic widget (mobile first)
 
 .weather-widget {
-  @include border-box();
+  @include box-sizing(border-box);
   width: 100%;
   max-width: 696px;
   @include typography();
   * {
-    @include border-box();
+    @include box-sizing(border-box);
   }
 }
 
