@@ -48,6 +48,12 @@ table {
 .some-content {
   visibility: hidden; }
 
+html, body {
+  height: 100%; }
+
+body {
+  background: linear-gradient(0deg, rgba(20, 44, 61, 0.75), rgba(20, 44, 61, 0.75)), linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #2A2D3E no-repeat; }
+
 .clearfix:after {
   content: "";
   display: block;
