@@ -1,7 +1,7 @@
 @import "reset";
 @import "mixins";
 @import "page";
-@import "carousel-flex";
+@import "carousel-grid";
 
 @mixin typography() {
   font-family: Lato, Arial, sans-serif;
@@ -34,17 +34,18 @@
 }
 
 .weather-widget__main-info {
-  @include flex();
-  @include flex-flow-row(wrap);
-  @include flex-end;
-  text-align: left;
+  display: grid;
+  justify-content: end;
 }
 
 .weather-widget__main-info_size_s {
   padding: 16px 8px 0;
+  grid-template-areas: "day"
+                      "weather";
 }
 
 .weather-widget__day {
+  grid-area: day;
   margin-bottom: 12px;
 }
 
@@ -56,16 +57,21 @@
   padding-bottom: 4px;
 }
 
-.weather-widget__space {
-  height: 0;
+.weather-widget__date {
+  white-space: nowrap;
 }
 
-.weather-widget__space_36px {
-  width: 36px;
+.weather-widget__space {
+  display: none;
+}
+
+.weather-widget__weather {
+  grid-area: weather;
 }
 
 .weather-widget__temp {
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .weather-widget__temp_size_s {
@@ -122,6 +128,8 @@
   .weather-widget__main-info_size_m {
     height: 327px;
     padding: 34px 30px 0;
+    grid-template-areas: "day weather";
+    column-gap: 26px;
   }
 
   .weather-widget__day-of-week_size_m {
@@ -134,10 +142,6 @@
 
   .weather-widget__date_size_m {
     font-size: 14px;
-  }
-
-  .weather-widget__space_26px {
-    width: 26px;
   }
 
   .weather-widget__temp_size_m {
