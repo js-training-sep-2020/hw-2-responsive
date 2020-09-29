@@ -7,9 +7,12 @@
     &__content {
         max-width: 615px;
         margin: 0 auto;
+        display: grid;
         display: -ms-grid;
         grid-template-columns: repeat(3, minmax(150px, 205px));
+        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(2, minmax(205px, auto));
+        -ms-grid-rows: 1fr 1fr;
     }
 
     &-item {
@@ -41,8 +44,10 @@
 
         &__wrapper {
             display: grid;
+            display: -ms-grid;
             align-items: center;
             grid-template-columns: repeat(4, 1fr);
+            -ms-grid-columns: 1fr 1fr 1fr 1fr;
             width: 100%;
             height: 99px;
             box-shadow: inset 0 0 35px rgba(39, 36, 37, 0.22);
@@ -55,9 +60,30 @@
         }
 
         &__everyday {
-            height: 64px;
             display: grid;
+            display: -ms-grid;
             justify-items: center;
+            height: 64px;
+
+            &:nth-child(1) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 1;
+            }
+
+            &:nth-child(2) {
+                -ms-grid-column: 2;
+                -ms-grid-row: 1;
+            }
+
+            &:nth-child(3) {
+                -ms-grid-column: 3;
+                -ms-grid-row: 1;
+            }
+
+            &:nth-child(4) {
+                -ms-grid-column: 4;
+                -ms-grid-row: 1;
+            }
         }
 
         &_blue {
@@ -82,6 +108,36 @@
 
         &_pink {
             background-color: #bd54cd;
+        }
+
+        &:nth-child(1) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+        }
+
+        &:nth-child(2) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 1;
+        }
+
+        &:nth-child(3) {
+            -ms-grid-column: 3;
+            -ms-grid-row: 1;
+        }
+
+        &:nth-child(4) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 2;
+        }
+
+        &:nth-child(5) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 2;
+        }
+
+        &:nth-child(6) {
+            -ms-grid-column: 3;
+            -ms-grid-row: 2;
         }
     }
 }
