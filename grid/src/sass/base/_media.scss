@@ -2,6 +2,26 @@
     .widget {
         padding-left: 10px;
         padding-right: 10px;
+
+        &-item {
+            &__wrapper {
+                height: 100%;
+            }
+
+            &__icon {
+                margin: 0;
+                width: 40%;
+
+                &_margin {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                &_cloudwindmoon {
+                    margin: 0;
+                }
+            }
+        }
     }
 }
 
@@ -24,6 +44,10 @@
         }
 
         &-item {
+            &__icon {
+                width: 50%;
+            }
+
             &__wrapper {
                 width: 100%;
             }
