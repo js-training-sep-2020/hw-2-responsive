@@ -47,8 +47,8 @@
       align-self: start;
     }
   }
-  &__item {
+  &__img {
     align-self: center;
-    grid-gap: 10%;
+    grid-gap: $GRIDGRAPPICTURE;
   }
 }

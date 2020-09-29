@@ -145,7 +145,7 @@ h6 {
       align-self: start;
 }
 
-.weather-list__item {
+.weather-list__img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
