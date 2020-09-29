@@ -3,6 +3,9 @@
   .weather-widget {
     font-size: $FONTSFORSMALLSCREEN;
   }
+  .weather-list__text {
+    font-size: 10px;
+  }
 }
 
 @media all and (max-width: 615px) {

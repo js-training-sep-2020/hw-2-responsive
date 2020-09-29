@@ -35,9 +35,20 @@
     grid-template-rows: $GRIDROWSLI;
     justify-items: center;
     align-items: end;
-    grid-row-gap: $GRIDROWGAPLI;
     &:first-child {
       grid-column-start: $GRIDCOLUMNSECOND;
     }
+  }
+  &__text {
+    &:nth-child(1) {
+      align-self: end;
+    }
+    &:nth-child(3) {
+      align-self: start;
+    }
+  }
+  &__item {
+    align-self: center;
+    grid-gap: 10%;
   }
 }
