@@ -1,10 +1,12 @@
 @import "_reset.scss";
 
+.weather-widget {  
+   max-width: 627px;
+   margin: 0px auto;
+}
 .weather-widget__body{
    display: flex;
    flex-flow: row wrap;
-   max-width: 627px;
-   margin: 0px auto;
    .weather-widget__box {
       display: block;
       min-height: 207px;
