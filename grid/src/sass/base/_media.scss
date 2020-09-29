@@ -1,0 +1,32 @@
+@media (max-width: 767px) {
+    .widget {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 468px) {
+    .widget {
+        padding: 10px;
+
+        &__content {
+            grid-template-columns: repeat(2, minmax(150px, 205px));
+            grid-template-rows: repeat(3, minmax(205px, auto));
+        }
+    }
+}
+
+@media (max-width: 319px) {
+    .widget {
+        &__content {
+            grid-template-columns: repeat(1, minmax(150px, 216px));
+            grid-template-rows: repeat(6, minmax(205px, auto));
+        }
+
+        &-item {
+            &__wrapper {
+                width: 100%;
+            }
+        }
+    }
+}

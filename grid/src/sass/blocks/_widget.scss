@@ -1,0 +1,89 @@
+.widget {
+    padding: 95px 93px 95px 94px;
+    max-width: 800px;
+    min-height: 600px;
+    background: url(../img/main.jpg) center (center/cover) no-repeat;
+
+    &__content {
+        max-width: 615px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(150px, 205px));
+        grid-template-rows: repeat(2, minmax(205px, auto));
+    }
+
+    &-item {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+
+        &__icon {
+            margin: 46px 58px 26px 57px;
+
+            &_margin {
+                margin-top: 40px;
+                margin-bottom: 25px;
+            }
+
+            &_cloudwindmoon {
+                margin: 24px 74px 17px 68px;
+            }
+        }
+
+        &__city {
+            margin-bottom: 37px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 11.52px;
+            text-transform: uppercase;
+        }
+
+        &__wrapper {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: repeat(4, 1fr);
+            width: 205px;
+            height: 99px;
+            box-shadow: inset 0 0 35px rgba(39, 36, 37, 0.22);
+            background-color: #bd3559;
+            text-shadow: 0 1px 0 rgba(220, 61, 102, 0.75);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &__everyday {
+            height: 64px;
+            display: grid;
+            justify-items: center;
+        }
+
+        &_blue {
+            background-color: #06b3db;
+        }
+
+        &_green {
+            background-color: #4ed486;
+        }
+
+        &_darkblue {
+            background-color: #6139f6;
+        }
+
+        &_yellow {
+            background-color: #e3b63d;
+        }
+
+        &_red {
+            background-color: #dc3d66;
+        }
+
+        &_pink {
+            background-color: #bd54cd;
+        }
+    }
+}
