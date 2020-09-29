@@ -1,0 +1,75 @@
+@import "_reset.scss";
+
+.weather-widget__body{
+   display: flex;
+   flex-flow: row wrap;
+   max-width: 627px;
+   margin: 0px auto;
+   .weather-widget__box {
+      display: block;
+      min-height: 207px;
+      flex: 1 0 207px; 
+      &_blue {background: #06B3DB;}      
+      &_green {background: #4ED486;}      
+      &_night {background: #6139F6;}      
+      &_yellow {background: #E3B63D;}      
+      &_red {background: #DC3D66;}      
+      &_purple {background: #BD54CD;}
+      &:hover {
+         .weather-widget__week-temperature_hide {
+            display: flex;
+            flex-direction: row;
+            background: radial-gradient(ellipse farthest-corner, rgba(0, 0, 0, .01), rgba(0, 0, 0, .15));
+         }
+         .weather-widget__title_hide {
+            display: none;
+         }
+         .weather-widget__icon_hide {
+            height: 50%;
+         }
+      }
+   }
+}
+.weather-widget__icon {
+   height: 70%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   img {
+      max-width: 100%;
+      height: auto;
+   }
+   &_less {
+      margin: 5px;
+   }
+}
+.weather-widget__title {
+   height: 30%;
+   font-family: 'Lato', sans-serif;
+   color: #FFFFFF;
+   display: flex;
+   justify-content: center;
+   &_less {
+      font-size: 12px;
+      margin-top: 16px;
+   }
+   &_temp {
+      font-size: 12px;
+      margin-bottom: 8px;
+   }
+}
+.weather-widget__week-temperature {  
+   display: none; 
+   height: 50%;
+   margin-bottom: 10%;
+   padding: 0px 10%;
+   .weather-widget__day {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      padding: 5px;
+      flex: 0 1 25%;
+   }
+}
+
