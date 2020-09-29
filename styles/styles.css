@@ -8,7 +8,7 @@ body {
 	height: 100%;
 }
 .container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 50px;
 }
@@ -17,7 +17,7 @@ body {
   position: relative;
 	background-image: url(../img/paris.png);
 	height: 435px;
-	max-width: 695px;
+	max-width: 696px;
 	width: 100%;
 	box-sizing: border-box;
 	display: flex;
