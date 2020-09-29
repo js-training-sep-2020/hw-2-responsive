@@ -1,0 +1,132 @@
+@import "./reset-css";
+
+/*			styles			*/
+
+$widget-text-color: #771921;
+$widget-nighttemp-color: #332126;
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+    width: 800px;
+    min-height: 600px;
+    background: url(img/bg.jpg) center no-repeat;
+    margin: auto;
+	padding-top: 80px;
+}
+
+.widget {
+    width: 580px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2);
+    user-select: none;
+	text-align: center;
+	font-family: "Dosis", sans-serif;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+
+	&__column-left {
+		background: url(img/bg2.jpg) center no-repeat;
+		background-size: cover;
+		border-right: 1px solid #3d0404;
+		color: white;
+		
+		display: grid;
+		grid-template-rows: 240px 95px 105px;
+	}
+	
+	&__column-right {
+		background: white;	
+		padding: 30px 35px 25px 35px;
+		color: $widget-text-color;
+		
+		display: grid;
+		grid-template-rows: 120px 100px 150px;
+	}
+
+	&__icon {
+		min-height: 240px;
+		padding-top: 40px;
+		grid-row: 1;
+
+		img {
+			display: block;
+			margin: auto;
+		}
+	}
+	
+	
+	&__description {
+		background: rgba(69, 53, 61, 0.95);
+		padding-top: 30px;
+		grid-row: 2;
+
+		p {
+			font-weight: 200;
+    		font-size: 36px;
+		}
+	}
+
+	&__location {
+		grid-row: 3;
+		background: rgba(134, 50, 57, 0.95);
+		padding-top: 40px;
+
+		p {
+			font-weight: 300;
+			font-size: 22px;
+		}
+	}
+	
+
+	&__temperature {
+		grid-row: 1;
+		border-bottom: 1px solid $widget-text-color;
+
+		p {
+			font-size: 101px;
+			font-weight: 200;
+		}
+	}
+	
+	&__graph {
+		grid-row: 2;
+		border-bottom: 1px solid $widget-text-color;
+		padding-top: 25px;
+	}
+	
+	&__forecast {
+		padding-top: 25px;
+		font-weight: 300;
+		grid-row: 3;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 45px;
+
+		&-day {
+			padding-top: 15px;
+    		border-bottom: 1px solid $widget-text-color;
+    		height: 40px;
+		}
+
+		&-daytemp, &-nighttemp {
+			padding-top: 15px;
+		}
+
+		&-nighttemp {
+			color: $widget-nighttemp-color;
+		}
+	}
+
+	&__link {
+		cursor: pointer;
+    	color: inherit;
+    	text-decoration: none;
+	}
+}
+
+@import "./media-queries";

@@ -1,0 +1,25 @@
+$tablet-breakpoint: 800px;
+$mobile-breakpoint: 580px;
+
+@media (max-width: $tablet-breakpoint) {
+    .wrapper {
+        background: none;
+        padding-top: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .widget {
+        width: 100%;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .widget {
+        border-radius: 0;
+
+        &__column-left {
+            border: none;
+        }
+    }
+}
