@@ -27,10 +27,12 @@ body {
 }
 .widget__temperature {
   display: grid;
-  grid-template-columns: 197px;
+  grid-template-columns: 333px 297px;
   grid-template-rows: 153px;
-  ppadding: 80px 50px 50px 50px;
+  grid-column-start: 2;
+  padding: 80px 50px 50px 50px;
   text-align: center;
+}
   }
 .widget__date {
   display: ;
