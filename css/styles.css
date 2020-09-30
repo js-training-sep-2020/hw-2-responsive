@@ -1,18 +1,3 @@
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background-image: linear-gradient(#b6b7bc, #2d3040);
-  height: 100%;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 50px;
-}
-
 .widget {
   margin: 0 auto;
   position: relative;
@@ -27,7 +12,6 @@ body {
   font-family: "Lato";
   color: #ffffff;
 }
-
 .widget__temperature {
   display: flex;
   justify-content: flex-end;
@@ -35,40 +19,33 @@ body {
   padding: 80px 50px 50px 50px;
   text-align: center;
 }
-
 .widget__date {
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 0px 32px 16px 32px;
 }
-
 .widget__info {
   display: flex;
   flex-direction: column;
 }
-
 .widget__city {
   font-size: 22px;
   font-weight: 300;
   padding: 0px 10px 17px 0px;
 }
-
 .widget__weekday {
   font-size: 30px;
   font-weight: 300;
 }
-
 .widget__month {
   font-size: 15px;
   font-weight: 300;
 }
-
 .widget__today {
   font-size: 15px;
   font-weight: 300;
 }
-
 .widget__value {
   font-size: 95px;
   line-height: 95px;
@@ -76,50 +53,23 @@ body {
   font-weight: 900;
   font-family: "Lato";
 }
-
 .widget__speed {
   font-size: 25px;
   line-height: 16px;
   font-weight: bold;
 }
-
 .widget__mph {
   font-size: 14px;
   font-weight: bold;
 }
-
 .widget__days {
   position: relative;
   display: flex;
 }
-
-.day {
-  padding: 18px 32px 16px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .widget__prev, .widget__next {
   padding: 40px;
   position: relative;
 }
-
-.day::after {
-  content: "";
-  position: absolute;
-  top: 11px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.7);
-  height: 80%;
-  width: 1px;
-}
-
-.day:last-child:after {
-  content: none;
-}
-
 .widget__weathercast {
   display: flex;
   position: relative;
@@ -148,4 +98,25 @@ body {
   .day {
     padding: 18px 5px 16px 5px;
   }
+}
+.day {
+  padding: 18px 32px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.day::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  height: 80%;
+  width: 1px;
+}
+
+.day:last-child:after {
+  content: none;
 }
