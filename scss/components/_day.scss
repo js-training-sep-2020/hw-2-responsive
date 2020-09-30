@@ -1,0 +1,20 @@
+.day {
+  padding: 18px 32px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.day::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  height: 80%;
+  width: 1px;
+}
+.day:last-child:after {
+  content: none;
+} 
