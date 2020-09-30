@@ -3,14 +3,14 @@
 
 .weather-widget__center-block {
    height: 15vh;
-   @media (max-width: 627px) {
+   @media (max-width: 620px) {
       height: 0px;
       transition: 500ms;
    }
 }
 
 .weather-widget {  
-   max-width: 627px;
+   max-width: 621px;
    margin: 0px auto;
 }
 .weather-widget__body{
