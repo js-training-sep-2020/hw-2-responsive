@@ -1,0 +1,189 @@
+
+body{
+    vertical-align: middle;
+    background-image: url(bg/bg.png);
+    background-repeat: no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+    background-attachment: fixed, local;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-shrink: 1;
+}
+.cell{
+    width: 100%;
+}
+.weather-widget{
+    width: 72%;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+.weather-widget__text{
+    font-family: system-ui;
+    font-size: 130%;
+    color: white;
+    font-weight: 600;
+    font-variant: small-caps;
+}
+span.weather-widget__text_week{
+    font-size: 80%;
+}
+.weather-widget__image{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.weather-widget__title{
+    padding-top: 10%;
+    padding-bottom: 15%;
+    text-align: center;
+}
+.weather-widget__title_Chicago{
+    background-color: #06b3db;
+    padding-bottom: 16.7%;
+}
+.weather-widget__title_Seattle{
+    background-color: #66cc99;
+    padding-bottom: 17.3%;
+}
+.weather-widget__title_Brooklyn{
+    background-color: #6a44f5;
+    padding-bottom: 16.3%;
+}
+.weather-widget__title_Portland{
+    background-color: #e3b63d;
+    padding-bottom: 12%;
+}
+.weather-widget__title_days{
+    background-color: #dc3d66;
+    padding-bottom: 0;
+    padding-top: 5%;
+}
+
+.weather-widget__title_days_week{
+    background-color: #b53355;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+.weather-widget__title_SanJose{
+    background-color: #bd54cd;
+    padding-bottom: 21%;
+}
+
+@media  screen and (max-width: 850px)  {
+    body{
+        background-image: url(bg/bg-mobile.png);
+        font-size: 80%;
+    }
+    .weather-widget__title_days_week{
+        font-size: 70%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+}
+@media  screen and (max-width: 1024px){
+    .weather-widget__title_SanJose{
+        padding-bottom: 23%;
+    }
+    .weather-widget__title_days_week{
+        padding-bottom: 5%;
+    }
+    body{
+        background-image: url(bg/bg-mobile.png);
+    }
+    
+}
+
+@media  screen and (max-width: 1366px){
+    .weather-widget__title_SanJose{
+        padding-bottom: 20%;
+    }
+    
+    body{
+        background-image: url(bg/bg-mobile.png);
+    }
+    
+}
+@media  screen and (max-width: 750px){
+    body{
+        background-image: url(bg/bg-smaller-mobile.png);
+        font-size: 60%;
+    }
+    .weather-widget__title_days_week{
+        font-size: 50%;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-bottom: 5.3%;
+    }
+    .weather-widget__title_SanJose{
+        padding-bottom: 28%;
+    }
+    .weather-widget__title_Seattle{
+        padding-bottom: 19%;
+    }
+    .weather-widget__title_Chicago{
+        padding-bottom: 18%;
+    }
+
+    .weather-widget__title_Brooklyn{
+        padding-bottom: 17.3%;
+    }
+    .weather-widget__title_Portland{
+        padding-bottom: 14%;
+    }
+}
+@media  screen and (max-width: 540px){
+    .weather-widget__title_days_week{
+        padding-bottom: 4%;
+    }
+    .weather-widget__title_SanJose{
+        padding-bottom: 31%;
+    }
+}
+@media  screen and (max-width: 420px){
+    body{
+        background-image: url(bg/bg-extra-smaller-mobile.png)
+    }
+    .weather-widget{
+        width: 50%;
+        top: 65%;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .weather-widget__title_days_week > .container {
+        flex-direction: row;
+    }
+    .weather-widget__title_days{
+        padding: 0;
+    }
+    .weather-widget__title_days_week{
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    .weather-widget__title_SanJose{
+        padding: 10%;
+    }
+    .weather-widget__title_Portland{
+        padding: 5%;
+    }
+    .weather-widget__title_Brooklyn{
+        padding: 5%;
+    }
+    .weather-widget__title_Seattle{
+        padding: 5%;
+    }
+    .weather-widget__title_Chicago{
+        padding: 5%;
+    }
+    
+}
