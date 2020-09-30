@@ -1,0 +1,221 @@
+p{
+    font-family: 'Dosis', sans-serif;
+    margin: 0 auto;
+}
+*{
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+.backgr{
+    background: url("images/Tokyo_backgr.png") no-repeat center center fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+.widget{
+    background-color: white;
+    min-height: 400px;
+    min-width: 500px;
+    border-radius: 5px;
+    height: 76%;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 50% 6% 9% 5% 9% 5% 9% 6%;
+    grid-template-rows: 33% 22% 20% 2% 5% 9% 9%;
+}
+.widget__elem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.widget__leftSide{
+    color: white;
+}
+.widget__rightSide{
+    color: #771921;
+}
+.widget__elem_leftSide{
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background: url("images/Tokyo_leftSide.png") no-repeat;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-size: cover;
+}
+.widget__elem_leftSide_skyImageBlock{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.widget__elem_leftSide_skyImage{
+    width: 15vw;
+    height: 23vh;
+}
+.widget__elem_leftSide_sky{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(20, 1, 0, 0.85);
+    font-size: 35px;
+}
+.widget__elem_leftSide_sky_text{
+    font-size: 3.1rem;
+}
+.widget__elem_leftSide_date{
+    grid-row-start: 5;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(125, 0, 10, 0.85);
+    border-bottom-left-radius: 5px;
+    font-size: 22px;
+}
+.widget__elem_leftSide_date_text{
+    font-size: 30px;
+}
+.widget__elem_rightSide_temp{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 8;
+    justify-content: center;
+    align-items: end;
+}
+.widget__elem_rightSide_tempText{
+    font-size: 8rem;
+}
+.widget__elem_rightSide_graph{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 8;
+    border-bottom: #771921 1px solid;
+    border-top: #771921 1px solid;
+}
+.widget__elem_rightSide__nextDays_weather1{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.widget__elem_rightSide__nextDays_weather2{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+.widget__elem_rightSide__nextDays_weather3{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+.widget__elem_rightSide__nextDays_skyImg{
+    width: 80%;
+    margin-top: 20%;
+}
+.widget__elem_rightSide__nextDays_day1{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    justify-content: start;
+    border-bottom: 1px solid #771921;
+}
+.widget__elem_rightSide__nextDays_day2{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    justify-content: start;
+    border-bottom: 1px solid #771921;
+}
+.widget__elem_rightSide__nextDays_day3{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 7;
+    grid-column-end: 8;
+    justify-content: start;
+    border-bottom: 1px solid #771921;
+}
+.widget__elem_rightSide__nextDays_dayText{
+    font-size: 25px;
+}
+.widget__elem_rightSide__nextDays_temp1{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.widget__elem_rightSide__nextDays_temp2{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+.widget__elem_rightSide__nextDays_temp3{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+.widget__elem_rightSide__nextDays_night_temp1{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.widget__elem_rightSide__nextDays_night_temp2{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+.widget__elem_rightSide__nextDays_night_temp3{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+.widget__elem_rightSide__nextDays_dayText__night{
+    color: black;
+    margin-bottom: 30%;
+}
+
+@media all and (max-width: 1450px) {
+    .widget__elem_rightSide_tempText{
+        font-size: 7rem;
+    }
+}
+@media all and (max-width: 1265px) {
+    .widget__elem_rightSide_tempText {
+        font-size: 6rem;
+    }
+}
+@media all and (max-width: 1090px) {
+    .widget__elem_rightSide_tempText {
+        font-size: 5rem;
+    }
+}
+
