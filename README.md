@@ -26,5 +26,11 @@
 Более сложный - отклонироваться от предыдущего репозитория, удалить связь с удаленным репозиторием, создать новую связь с новым удаленным репозиторием (этим).
 - Сделать PR.
 
-To launch the widget you need to move to src folder and run index.html file in your browser.
-This widget is created using the SCSS preprocessor, BEM technology, bootstrap-reboot and gulp.
+This weather widget is created using the SCSS preprocessor, BEM technology, flexbox and grid CSS, bootstrap-reboot and gulp.
+
+Run project locally:
+1. git clone https://github.com/shabspb/hw-2-responsive.git
+2. cd hw-2-responsive\flexbox or cd hw-2-responsive\grid
+3. npm install;
+4. gulp
+5. browser will start automatically
