@@ -1,0 +1,407 @@
+html {
+  overflow-x: hidden;
+}
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (min-width: 2560px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    color: #771921;
+  }
+  .background-image {
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 11vh 45vw 11vh;
+  }
+  .widget-container {
+    font-weight: 400;
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.44);
+    font-family: "Dosis", sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .one-day-weather__degrees p:first-of-type {
+    line-height: 100px;
+  }
+  .weather-icon:before {
+    height: 650px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+  html {
+    overflow-y: hidden;
+  }
+  body {
+    width: 100vw;
+    height: 130vh;
+  }
+  .background-image {
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 11vh 45vw 11vh;
+  }
+  .widget-container {
+    font-weight: 400;
+    font-size: 24px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.44);
+    font-family: "Dosis", sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .one-day-weather__degrees p:first-of-type {
+    line-height: 80px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  html {
+    overflow-y: hidden;
+  }
+  body {
+    width: 100vw;
+    height: 170vh;
+  }
+  .background-image {
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 6.875vh 60vw 6.875vh;
+  }
+  .widget-container {
+    font-weight: 400;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.44);
+    font-family: "Dosis", sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .one-day-weather__degrees p:first-of-type {
+    line-height: 70px;
+  }
+  .weather-icon:before {
+    height: 200px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    width: 100vw;
+    height: 200vh;
+  }
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat-y;
+    grid-template-columns: 10% 80% 10%;
+  }
+  .widget-container {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.44);
+  }
+  .widget-photo {
+    width: 100%;
+    height: 50%;
+  }
+  .weather-info {
+    width: 100%;
+    height: 50%;
+  }
+  .one-day-weather__degrees p:first-of-type {
+    line-height: 70px;
+  }
+  .weather-icon:before {
+    height: 200px;
+  }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  body {
+    width: 100vw;
+    height: 150vh;
+  }
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat-y;
+    grid-template-columns: 10% 80% 10%;
+  }
+  .widget-container {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.44);
+  }
+  .widget-photo {
+    width: 100%;
+    height: 50%;
+  }
+  .weather-info {
+    width: 100%;
+    height: 50%;
+  }
+  .one-day-weather__degrees p:first-of-type {
+    line-height: 70px;
+  }
+  .weather-icon:before {
+    height: 50px;
+  }
+}
+@media (min-width: 320px) and (max-width: 424px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat-y;
+    grid-template-columns: auto auto auto;
+  }
+  .widget-container {
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.44);
+  }
+  .widget-photo {
+    width: 100%;
+    height: 50%;
+  }
+  .weather-info {
+    width: 100%;
+    height: 50%;
+  }
+  .one-day-weather__degrees p:first-of-type {
+    line-height: 70px;
+  }
+  .weather-icon:before {
+    height: 50px;
+  }
+}
+.background-image {
+  background: url("src/img/background_image_1.png");
+  background-size: 100%;
+  display: grid;
+}
+.widget-photo {
+  background: url("src/img/background_photo_1.png");
+  border-right: 1px solid #771921;
+  background-size: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: grid;
+  grid-template-rows: 58% 21% 21%;
+}
+.widget-photo__info-block {
+  margin: auto auto;
+  width: auto;
+  height: 21%;
+  color: white;
+  line-height: 48px;
+  opacity: 0.89;
+}
+.widget-photo .one-day-weather__degrees p:first-of-type {
+  line-height: 40px;
+}
+.widget-photo .weather-icon:before {
+  height: 400px;
+}
+.weather-icon {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  position: relative;
+  overflow: hidden;
+}
+.weather-icon img {
+  margin: auto auto;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.weather-icon:before {
+  width: 114%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.45));
+  background-size: 120%;
+  transform: translateX(-10.6em) skewX(-50deg);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.type-of-weather {
+  width: 100%;
+  height: 100%;
+  background-color: #2e1c25;
+  text-align: center;
+  display: table;
+  font-weight: 200;
+  font-size: 2.25em;
+}
+.type-of-weather p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.city-and-date {
+  width: 100%;
+  height: 100%;
+  background-color: #771921;
+  text-align: center;
+  display: table;
+  font-weight: 300;
+  font-size: 1.375em;
+}
+.city-and-date p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.weather-info {
+  background-color: white;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: 14% 72% 14%;
+  grid-template-rows: 6% 88% 6%;
+}
+.weather-info-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-rows: 34% 25% 41%;
+}
+.temperature {
+  font-weight: 200;
+  font-size: 6.1875em;
+  border-bottom: 1px solid #771921;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+}
+.temperature p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.graph {
+  border-bottom: 1px solid #771921;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  position: relative;
+  overflow: hidden;
+}
+.graph img {
+  margin: auto auto;
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.few-days-forecast {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  gap: 5%;
+  grid-template-columns: auto auto auto;
+}
+.few-days-forecast__day-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.few-days-forecast__day-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.few-days-forecast__day-3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.one-day-weather {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  color: #771921;
+}
+.one-day-weather__icon-weekday {
+  border-bottom: 1px solid #771921;
+  height: 100%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+.one-day-weather__icon-weekday img {
+  margin: auto auto;
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.one-day-weather__icon-weekday p {
+  margin: auto auto;
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.one-day-weather__temperature {
+  height: 100%;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  line-height: 30px;
+}
+.one-day-weather__degrees {
+  margin: auto auto;
+  height: 100%;
+  gap: 5%;
+  display: grid;
+  grid-template-rows: 58% 42%;
+}
+.one-day-weather__degrees p:first-of-type {
+  color: #2e1c25;
+  width: 100%;
+}
+.one-day-weather__degrees p:last-of-type {
+  color: #2e1c25;
+  width: 100%;
+}
