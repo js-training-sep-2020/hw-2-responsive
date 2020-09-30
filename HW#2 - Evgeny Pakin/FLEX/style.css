@@ -1,0 +1,283 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**END OF RESET CSS*/
+/*TEXT ADJUSTMENTS*/
+.widget__card_info , 
+.day__abbreviation , 
+.day__temperature {
+	font-family: 'Roboto','Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1em;
+	font-size: 1em;
+	color:#fff;
+		
+}
+.day__abbreviation , 
+.day__temperature {
+	font-size: 0.8em;
+	line-height: 0px;
+	
+}
+.widget__card_info {
+	position: relative;
+	display: inline-block;
+	margin-top: 20px;
+	white-space: nowrap;
+}
+/*MAIN SECTION GENERAL FLOW and CARDS PARAMS*/
+
+.wrapper {
+	padding: 100px 100px 100px 100px;
+	width: 100%;
+	height: 100%;
+	height: 100vh;
+	background: url("main.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	
+	
+}
+
+.weather-widget {
+	
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	flex-shrink: 0;
+	-ms-flex-negative: 0;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	max-width: 615px; /*3 card in each line and  calculated 205px per each*/
+	-webkit-box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.75);
+	
+}
+
+.weather-widget__card {
+	height: 205px;
+	width: 205px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
+	-ms-flex-line-pack: justify;
+		align-content: space-between;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+}
+
+img {
+	flex-shrink: 0; /*prevent shrink img in mozilla*/
+	-ms-flex-negative: 0;
+}
+
+.fix{
+	margin-top: 3em; /*correct align for san jose*/
+}
+
+/*ADJUSTMENTS FOR SUBMENU CARD*/
+ .weather-widget__card_top{
+	 padding-top: 17px;
+ }
+ 
+.weather-widget__card__week {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	width: 205px;
+	background-color: #b53355;
+	margin-top: 25px;
+
+
+}
+
+.card__day {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	justify-content: space-between;
+	max-width: 22%;
+	max-height: 100px;
+	
+	
+}
+
+ul:nth-child(1){
+	padding-left: 30px;
+}
+
+.day__image-wrapper {
+	-webkit-transform: scale(0.30);
+	    -ms-transform: scale(0.30);
+	        transform: scale(0.30);
+	margin-bottom: -10px;
+	margin-top: -10px;
+}
+ 
+
+/*BACKGROUND COLORS FOR CARDS*/
+.weather-widget__card_blue {
+	background-color: #06b3db ;
+	
+}
+.weather-widget__card_green {
+    background-color: #4ed486;
+	
+}
+.weather-widget__card_darkblue {
+    background-color: #6139f6;
+	
+}
+.weather-widget__card_yellow {
+    background-color: #e3b63d;
+	
+}
+.weather-widget__card_red {
+    background-color: #dc3d66;
+	 
+}
+.weather-widget__card_purple{
+	background-color: #bd54cd;
+	
+} 
+/* adapting for mobile and tab view*/
+@media only screen and (max-width: 840px) {
+    
+    .weather-widget {
+        max-width: 410px;
+	}
+	.wrapper {
+	height: 150vh;
+    width: 150vw;
+	}
+}
+@media only screen and (max-width: 400px) {
+    
+    .weather-widget {
+        max-width: 250px;
+	}
+	.wrapper {
+		height: 150vh;
+		width: 150vw;
+	}
+	.weather-widget__card {
+		height: 125px;
+		width: 125px;
+	}
+	img {
+		transform: scale(0.5);
+	}
+	.widget__card_info , 
+	.day__abbreviation , 
+	.day__temperature {
+		font-size: 0.7em;
+		margin-bottom: 20px;	
+	}
+	.weather-widget__card_red {
+	height: 0px;
+  	padding-bottom: 50.25%; /* 16:9 */
+  	position: relative;
+	
+	}
+	.weather-widget__card__week{
+		overflow: auto;
+		position: absolute;
+		top:35px; left: 0;
+		width: 100%; height: 50%;
+		  
+	}
+	.weather-widget__card_top{ 
+		margin-top: 3em;
+	}
+		/* position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%; */
+	
+}
