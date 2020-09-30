@@ -1,5 +1,14 @@
 @import "_reset.scss";
 
+
+.weather-widget__center-block {
+   margin: 20vh 0;
+   @media (max-width: 627px) {
+      margin: 0 auto;
+      transition: 500ms;
+   }
+}
+
 .weather-widget {  
    max-width: 627px;
    margin: 0px auto;
