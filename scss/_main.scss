@@ -1,0 +1,69 @@
+.widget{
+  @include text-style;
+  margin: 0 auto;
+  padding: 150px 0;
+  background: url("../img/bg-widget.png");
+  background-position: center;
+  background-size: cover;
+  &__container{
+    margin: auto;
+    width: 615px;
+    height: 410px;
+    display:flex;
+    flex-wrap:wrap;
+    box-shadow: 0 0 60px #000000;
+  }
+  &__item{
+    height: 205px;
+    width: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @each $name, $color in $name-colors{
+        &_#{$name} {
+        background: $color;
+      }
+    }
+    &_yellow, &_pink{
+      .widget__weather{margin-top: auto; margin-bottom: 35px;}
+      .widget__icon{margin-top: 40px;}
+    }
+    &_pink{
+      .widget__icon{padding: 13px;}
+    }
+  }
+  &__icon{
+      margin-top: 45px;
+      &_small{
+        margin-top: 23px;
+      }
+  }
+  &__weather{
+    margin-top: auto;
+    margin-bottom: 45px;
+  }
+  &__week{
+    background-color: $dark-red-color;
+    height: 102px;
+    width: inherit;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 0px;
+    }
+  &__day{
+    font-size: 12px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 15px;
+  }
+  &__day:last-child{
+    padding-right: 0px;
+  }
+
+}

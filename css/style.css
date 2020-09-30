@@ -1,0 +1,89 @@
+.widget {
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-weight: bold;
+  font-height: 11.52px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 150px 0;
+  background: url("../img/bg-widget.png");
+  background-position: center;
+  background-size: cover;
+}
+.widget__container {
+  margin: auto;
+  width: 615px;
+  height: 410px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 60px #000000;
+}
+.widget__item {
+  height: 205px;
+  width: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.widget__item_blue {
+  background: #06b3db;
+}
+.widget__item_green {
+  background: #4ed486;
+}
+.widget__item_purple {
+  background: #6139f6;
+}
+.widget__item_yellow {
+  background: #e3b63d;
+}
+.widget__item_red {
+  background: #dc3d66;
+}
+.widget__item_pink {
+  background: #bd54cd;
+}
+.widget__item_yellow .widget__weather, .widget__item_pink .widget__weather {
+  margin-top: auto;
+  margin-bottom: 35px;
+}
+.widget__item_yellow .widget__icon, .widget__item_pink .widget__icon {
+  margin-top: 40px;
+}
+.widget__item_pink .widget__icon {
+  padding: 13px;
+}
+.widget__icon {
+  margin-top: 45px;
+}
+.widget__icon_small {
+  margin-top: 23px;
+}
+.widget__weather {
+  margin-top: auto;
+  margin-bottom: 45px;
+}
+.widget__week {
+  background-color: #b03153;
+  height: 102px;
+  width: inherit;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 0px;
+}
+.widget__day {
+  font-size: 12px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 15px;
+}
+.widget__day:last-child {
+  padding-right: 0px;
+}

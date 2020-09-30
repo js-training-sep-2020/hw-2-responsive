@@ -1,0 +1,21 @@
+$name-colors: (
+  blue: #06b3db,
+  green: #4ed486,
+  purple: #6139f6,
+  yellow: #e3b63d,
+  red: #dc3d66,
+  pink: #bd54cd
+);
+
+@mixin text-style{
+  font: {
+    family: "Avenir Next";
+    size: 16px;
+    weight: bold;
+    height: 11.52px;
+  }
+  text-transform: uppercase;
+  color: #ffffff;
+};
+
+$dark-red-color: #b03153;
