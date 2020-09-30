@@ -1,0 +1,22 @@
+@font-face {
+   font-family: 'Open Sans Bold';
+   src: url('fonts/OpenSans/OpenSans-Bold.ttf')
+}
+@font-face {
+   font-family: 'Proxima Nova Light';
+   src: url('fonts/ProximaNova/subset-ProximaNova-Light.ttf')
+}
+@font-face {
+   font-family: 'Proxima Nova Regular';
+   src: url('fonts/ProximaNova/subset-ProximaNova-Regular.ttf')
+}@font-face {
+   font-family: 'Proxima Nova Bold';
+   src: url('fonts/ProximaNova/subset-ProximaNova-Bold.ttf')
+}
+@font-face {
+   font-family: 'Source Sans Pro Regular';
+   src: url('fonts/SourceSansPro/SourceSansPro-Regular.ttf')
+}@font-face {
+   font-family: 'Source Sans Pro Light';
+   src: url('fonts/SourceSansPro/SourceSansPro-Light.ttf')
+}
