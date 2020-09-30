@@ -1,0 +1,165 @@
+p{
+    font-family: 'Dosis', sans-serif;
+    margin: 0 auto;
+}
+*{
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+.backgr{
+    background: url("images/Tokyo_backgr.png") no-repeat center center fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+.widget{
+    background-color: white;
+    min-height: 400px;
+    min-width: 500px;
+    border-radius: 5px;
+    height: 76%;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+}
+.widget__elem{
+    display: flex;
+    flex-direction: column;
+}
+.widget__textPosition{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.widget__elem_leftSide{
+    height: 100%;
+    width: 50%;
+    background: url("images/Tokyo_leftSide.png") no-repeat;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-size: cover;
+    color: white;
+}
+.widget__elem_rightSide{
+    color: #771921;
+    height: 100%;
+    width: 38%;
+    background: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.widget__elem_verticalLine{
+    height: 100%;
+    width: 6%;
+}
+.widget__elem_leftSide_skyImageBlock{
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+    position: relative;
+}
+.widget__elem_leftSide_skyImage{
+    width: 15vw;
+    height: 23vh;
+}
+.widget__elem_leftSide_sky{
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    height: 22%;
+    background-color: rgba(20, 1, 0, 0.85);
+    width: 100%;
+    font-size: 35px;
+}
+.widget__elem_leftSide_sky_text{
+    font-size: 3.1rem;
+}
+.widget__elem_leftSide_date{
+    justify-content: center;
+    position: relative;
+    height: 23%;
+    background-color: rgba(125, 0, 10, 0.85);
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    font-size: 22px;
+}
+.widget__elem_leftSide_date_text{
+    font-size: 30px;
+}
+.widget__elem_rightSide_temp{
+    justify-content: center;
+    width: 100%;
+    align-items: end;
+    height: 33%;
+}
+.widget__elem_rightSide_tempText{
+    font-size: 8rem;
+}
+.widget__elem_rightSide_graph{
+    width: 100%;
+    height: 22%;
+    border-bottom: #771921 1px solid;
+    border-top: #771921 1px solid;
+}
+.widget__elem_rightSide__nextDays{
+    display: flex;
+    /*justify-content: space-between;*/
+    width: 100%;
+    height: 45%;
+}
+.widget__elem_rightSide__nextDays_space-between{
+    height: 100%;
+    width: 13%;
+}
+.widget__elem_rightSide__nextDays_day{
+    height: 100%;
+    width: 23%;
+}
+.widget__elem_rightSide__nextDays_weather{
+    border-bottom: 1px solid #771921;
+    justify-content: space-around;
+    width: 100%;
+    height: 58%;
+}
+.widget__elem_rightSide__nextDays_skyImg{
+    width: 80%;
+    margin-top: 20%;
+}
+.widget__elem_rightSide__nextDays_dayText{
+    font-size: 25px;
+}
+.widget__elem_rightSide__nextDays_temp{
+    justify-content: space-around;
+    width: 100%;
+    height: 42%;
+}
+.widget__elem_rightSide__nextDays_dayText__night{
+    color: black;
+    margin-bottom: 30%;
+}
+
+@media all and (max-width: 1410px) {
+    .widget__elem_rightSide_tempText{
+        font-size: 7rem;
+    }
+}
+@media all and (max-width: 1235px) {
+    .widget__elem_rightSide_tempText {
+        font-size: 6rem;
+    }
+}
+@media all and (max-width: 1070px) {
+    .widget__elem_rightSide_tempText {
+        font-size: 5rem;
+    }
+}
+
+
+
