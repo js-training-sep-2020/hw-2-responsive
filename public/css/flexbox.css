@@ -1,0 +1,155 @@
+html, body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: url("fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.eot");
+  src: url("fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.woff") format("woff"), url("fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ProximaNovaBold";
+  src: url("fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.eot");
+  src: url("fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.woff") format("woff"), url("fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansProLight";
+  src: url("fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.eot");
+  src: url("fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.eot?#iefix") format("embedded-opentype"), url("fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.woff") format("woff"), url("fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url("fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.eot");
+  src: url("fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.eot?#iefix") format("embedded-opentype"), url("fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.woff") format("woff"), url("fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot");
+  src: url("fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("fonts/MyriadPro/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("fonts/MyriadPro/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.weather-widget {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+  width: 35vw;
+  height: 41.72vw;
+  border-radius: 0.8344vw;
+  position: relative;
+  background-color: #f1f8f9;
+  -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.weather-widget__row {
+  width: 35vw;
+  text-align: center;
+}
+.weather-widget__row--refresh {
+  flex: 0 1 10.9%;
+  cursor: pointer;
+  text-align: right;
+}
+.weather-widget__row--refresh img {
+  width: 1.505vw;
+  padding: 1.75vw;
+}
+.weather-widget__row--cloud {
+  flex: 0 1 40.9%;
+}
+.weather-widget__row--cloud img {
+  width: 13.055vw;
+  padding-top: 1.62708vw;
+}
+.weather-widget__row--empty-space {
+  flex: 0 1 3.7%;
+}
+.weather-widget__row--footer {
+  flex: 0 1 29.4%;
+  background-color: #2e3335;
+  border-radius: 0 0 0.8344vw 0.8344vw;
+}
+.weather-widget__row--footer .additional-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 9.5956vw;
+  color: white;
+}
+.weather-widget__row--footer .additional-information__wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 33.3%;
+}
+.weather-widget__row--footer .additional-information__wrapper--image {
+  height: 1.4602vw;
+}
+.weather-widget__row--footer .additional-information__wrapper--info {
+  margin-top: 0.6258vw;
+  margin-left: 1.05vw;
+  font-family: "ProximaNovaRegular";
+  font-weight: 700;
+  font-size: 1.2516vw;
+}
+
+.widget-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 0 1 15.1%;
+}
+.widget-data__degrees {
+  flex: 0 1 29.3%;
+  text-align: center;
+  font-family: "ProximaNovaRegular";
+  font-size: 4.5892vw;
+  padding-top: 1.00128vw;
+  color: #a5acaf;
+}
+.widget-data__location {
+  flex: 0 1 53.7%;
+}
+.widget-data__location--appearance {
+  text-align: left;
+  font-family: "SourceSansProLight";
+  font-size: 1.91912vw;
+  color: #c2cacd;
+  padding-top: 1.41848vw;
+}
+.widget-data__location--city {
+  text-align: left;
+  font-family: "SourceSansProRegular";
+  font-size: 1.33504vw;
+  color: #a2a9ad;
+  padding-top: 0.50064vw;
+}
+.widget-data__date {
+  flex: 0 1 17%;
+  background-color: #54bae6;
+}
+.widget-data__date div {
+  font-family: "MyriadProRegular";
+  font-weight: bold;
+  font-size: 1.6688vw;
+  padding-top: 0.95956vw;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=flexbox.css.map */
