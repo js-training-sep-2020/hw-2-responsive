@@ -1,0 +1,27 @@
+.dots {
+  width: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.dots__item {
+  width: 7px;
+  height: 7px;
+  border: 2px solid @main-color;
+  border-radius: 50%;
+  box-sizing: content-box;
+  
+  &&--checked {
+    border: none;
+    background-color: #fff;
+  }
+}
+
+@media all and (min-width: @tablet-width) {
+  .dots {
+    display: none;
+  }
+}

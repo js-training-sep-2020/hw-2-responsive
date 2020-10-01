@@ -18,8 +18,23 @@ var include = require("posthtml-include");
 
 var del = require("del");
 
-gulp.task("css", function () {
-  return gulp.src("src/less/style.less")
+gulp.task("css-flex", function () {
+  return gulp.src("src/less-flex/style.less")
+    .pipe(plumber())
+    .pipe(srcmap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
+    .pipe(srcmap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("css-grid", function () {
+  return gulp.src("src/less-grid/style.less")
     .pipe(plumber())
     .pipe(srcmap.init())
     .pipe(less())
@@ -58,7 +73,8 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("src/less/**/*.less", gulp.series("css"));
+  gulp.watch("src/less-flex/**/*.less", gulp.series("css-flex"));
+  gulp.watch("src/less-grid/**/*.less", gulp.series("css-grid"));
   gulp.watch("src/*.html", gulp.series("html", "refresh"));
 });
 
@@ -82,11 +98,21 @@ gulp.task("clean", function() {
   return del("build");
 });
 
-gulp.task("build", gulp.series(
+gulp.task("build-flex", gulp.series(
   "clean",
   "copy",
-  "css",
+  "css-flex",
   "images",
   "html"
 ));
-gulp.task("start", gulp.series("build", "server"));
+
+gulp.task("build-grid", gulp.series(
+  "clean",
+  "copy",
+  "css-grid",
+  "images",
+  "html"
+  ));
+  
+gulp.task("start-flex", gulp.series("build-flex", "server"));
+gulp.task("start-grid", gulp.series("build-grid", "server"));
