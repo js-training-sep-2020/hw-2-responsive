@@ -18,6 +18,10 @@ var include = require("posthtml-include");
 
 var del = require("del");
 
+var autoprefixerOptions = {
+	grid: true
+};
+
 gulp.task("css-flex", function () {
   return gulp.src("src/less-flex/style.less")
     .pipe(plumber())
@@ -39,7 +43,7 @@ gulp.task("css-grid", function () {
     .pipe(srcmap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(autoprefixerOptions)
     ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
