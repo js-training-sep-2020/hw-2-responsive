@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "AvenirNextCyr-bold";
+    src: url("../fonts/AvenirNextCyr-bold/AvenirNextCyr-Bold.eot");
+    src: url("../fonts/AvenirNextCyr-bold/AvenirNextCyr-Bold.ttf") format("truetype"),
+         url("../fonts/AvenirNextCyr-bold/AvenirNextCyr-Bold.woff") format("woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AvenirNextCyr-Medium";
+    src: url("../fonts/AvenirNextCyr-Medium/AvenirNextCyr-Medium.eot");
+    src: url("../fonts/AvenirNextCyr-Medium/AvenirNextCyr-Medium.ttf") format("truetype"),
+    url("../fonts/AvenirNextCyr-Medium/AvenirNextCyr-Medium.woff") format("woff");
+    font-style: normal;
+}
