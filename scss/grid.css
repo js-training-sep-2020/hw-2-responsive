@@ -1,27 +1,26 @@
-
 html {
   height: 100%;
   overflow: hidden;
 }
 body {
-  background-image: linear-gradient( #b6b7bc, #2d3040);
-	height: 100%;
+  background-image: linear-gradient(#b6b7bc, #2d3040);
+  height: 100%;
 }
-.container {
+.main-block {
   margin: 0 auto;
   padding: 50px;
 }
 .widget {
   margin: 0 auto;
   position: relative;
-	background-image: url(../img/paris.png);
-	height: 435px;
-	max-width: 696px;
-	width: 100%;
-	box-sizing: border-box;
-	display: ;
-	grid-template-columns: ;
-	justify-content: ;
+  background-image: url(../img/paris.png);
+  height: 435px;
+  max-width: 696px;
+  width: 100%;
+  box-sizing: border-box;
+  display: ;
+  grid-template-columns: ;
+  justify-content: ;
   font-family: "Lato";
   color: #ffffff;
 }
@@ -33,9 +32,9 @@ body {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   justify-content: end;
-  -webkit-column-gap:26px;
-     -moz-column-gap:26px;
-          column-gap:26px;
+  -webkit-column-gap: 26px;
+  -moz-column-gap: 26px;
+  column-gap: 26px;
   padding: 80px 50px 50px 50px;
   text-align: center;
   height: 327px;
@@ -47,8 +46,8 @@ body {
 }
 
 .widget__temperature > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
 }
 .widget__date {
   position: relative;
@@ -58,12 +57,12 @@ body {
   font-size: 22px;
   font-weight: 300;
   padding: 0px px px 0px;
-  display:block;
-  }
+  display: block;
+}
 .widget__weekday {
   font-size: 30px;
   font-weight: 300;
-  }
+}
 .widget__month {
   font-size: 15px;
   font-weight: 300;
@@ -100,7 +99,8 @@ body {
   display: grid;
   height: 112px;
 }
-.widget__prev, .widget__next {
+.widget__prev,
+.widget__next {
   padding: 40px;
   position: relative;
 }
@@ -126,21 +126,19 @@ body {
   font-size: 15px;
   width: 100%;
   height: 108px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
-.widget__day-value .day__value {
-  line-height:
-}
-@media screen and (max-width: 768px){
-  .widget__temperature{
-     display: grid;
-     grid-template-rows: auto auto;
-     grid-template-columns: auto;
- }
-  .widget__prev, .widget__next{
+@media screen and (max-width: 768px) {
+  .widget__temperature {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+  .widget__prev,
+  .widget__next {
     padding: 5px;
- }
+  }
   .day {
     padding: 18px 5px 16px 5px;
- }
+  }
 }
