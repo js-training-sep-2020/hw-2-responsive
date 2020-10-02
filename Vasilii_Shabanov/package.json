@@ -1,8 +1,8 @@
 {
   "name": "programming",
   "version": "1.0.0",
-  "description": "gulp file for pack weather widget",
-  "main": "index.html",
+  "description": "Homework 2",
+  "main": "gulpfile.js",
   "dependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0"
@@ -19,7 +19,11 @@
     "gulp-sass": "^4.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-flex": "gulp build-flex",
+    "start-flex": "gulp start-flex",
+    "build-grid": "gulp build-grid",
+    "start-grid": "gulp start-grid"
   },
   "repository": {
     "type": "git",
