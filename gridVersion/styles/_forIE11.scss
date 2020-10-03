@@ -1,0 +1,91 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   .weather-widget__body {
+      display: -ms-grid;
+      -ms-grid-columns: minmax(207px, 1fr) minmax(207px, 1fr) minmax(207px, 1fr);
+      -ms-grid-rows: 207px 207px;
+   }
+
+   .weather-widget__box:nth-child(2) {
+      -ms-grid-column: 2;
+   }
+   .weather-widget__box:nth-child(3) {
+      -ms-grid-column: 3;
+   }
+   .weather-widget__box:nth-child(4) {
+      -ms-grid-row: 2;
+   }
+   .weather-widget__box:nth-child(5) {
+      -ms-grid-column: 2;
+      -ms-grid-row: 2;
+   }
+   .weather-widget__box:nth-child(6) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 2;
+   }
+
+   .weather-widget__day:nth-child(2) {-ms-grid-column: 2;}
+   .weather-widget__day:nth-child(3) {-ms-grid-column: 3;}
+   .weather-widget__day:nth-child(4) {-ms-grid-column: 4;}
+
+   @media (max-width: 620px) {
+      .weather-widget {
+         max-width: 414px;
+      }
+      .weather-widget__body {
+         -ms-grid-columns: minmax(207px, 1fr) minmax(207px, 1fr);
+         -ms-grid-rows: 207px 207px 207px;
+      }
+      .weather-widget__box:nth-child(2) {
+         -ms-grid-column: 2;
+      }
+      .weather-widget__box:nth-child(3) {
+         -ms-grid-column: 1;
+         -ms-grid-row: 2;
+      }
+      .weather-widget__box:nth-child(4) {
+         -ms-grid-column: 2;
+         -ms-grid-row: 2;
+      }
+      .weather-widget__box:nth-child(5) {
+         -ms-grid-column: 1;
+         -ms-grid-row: 3;
+      }
+      .weather-widget__box:nth-child(6) {
+         -ms-grid-column: 2;
+         -ms-grid-row: 3;
+      }
+   }
+
+   @media (max-width: 413px) {
+      .weather-widget {
+         max-width: 207px;
+      }
+      .weather-widget__body {
+         -ms-grid-columns: minmax(207px, 1fr);
+         -ms-grid-rows: 207px 207px 207px 207px 207px 207px;
+      }
+      .weather-widget__box:nth-child(2) {
+         -ms-grid-column: 1;
+         -ms-grid-row: 2;
+      }
+      .weather-widget__box:nth-child(3) {
+         -ms-grid-row: 3;
+      }
+      .weather-widget__box:nth-child(4) {
+         -ms-grid-column: 1;
+         -ms-grid-row: 4;
+      }
+      .weather-widget__box:nth-child(5) {
+         -ms-grid-row: 5;
+      }
+      .weather-widget__box:nth-child(6) {
+         -ms-grid-column: 1;
+         -ms-grid-row: 6;
+      }
+   }  
+   
+   .weather-widget {
+      max-width: 621px;
+      margin: 0px auto;
+   }
+}
