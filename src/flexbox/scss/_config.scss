@@ -10,9 +10,8 @@ $name-colors: (
 @mixin text-style{
   font: {
     family: "Avenir Next";
-    size: 16px;
+    size: 1.12vw;
     weight: bold;
-    height: 11.52px;
   }
   text-transform: uppercase;
   color: #ffffff;

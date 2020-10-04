@@ -1,27 +1,25 @@
 .widget {
   font-family: "Avenir Next";
-  font-size: 16px;
+  font-size: 1.12vw;
   font-weight: bold;
-  font-height: 11.52px;
   text-transform: uppercase;
   color: #ffffff;
   margin: 0 auto;
   padding: 150px 0;
-  background: url("../img/bg-widget.png");
+  background: url("../../../img/bg-widget.png");
   background-position: center;
   background-size: cover;
 }
 .widget__container {
   margin: auto;
-  width: 615px;
-  height: 410px;
+  width: 43.2%;
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 0 60px #000000;
 }
 .widget__item {
-  height: 205px;
-  width: 205px;
+  width: 33.33333333%;
+  height: 14.24vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,29 +43,31 @@
   background: #bd54cd;
 }
 .widget__item_yellow .widget__weather, .widget__item_pink .widget__weather {
-  margin-top: auto;
-  margin-bottom: 35px;
-}
-.widget__item_yellow .widget__icon, .widget__item_pink .widget__icon {
-  margin-top: 40px;
+  margin-bottom: 15%;
 }
 .widget__item_pink .widget__icon {
-  padding: 13px;
+  padding: 6%;
 }
 .widget__icon {
-  margin-top: 45px;
+  width: 43%;
+  margin-top: 20%;
+}
+.widget__icon img {
+  width: 100%;
 }
 .widget__icon_small {
-  margin-top: 23px;
+  width: 30%;
+  margin-top: 9%;
+  margin-bottom: 9%;
 }
 .widget__weather {
   margin-top: auto;
-  margin-bottom: 45px;
+  margin-bottom: 18%;
 }
 .widget__week {
   background-color: #b03153;
-  height: 102px;
-  width: inherit;
+  height: 50%;
+  width: 100%;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -76,14 +76,55 @@
   margin-bottom: 0px;
 }
 .widget__day {
-  font-size: 12px;
-  height: 65px;
+  font-size: 0.8vw;
+  height: 70%;
+  max-width: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding-right: 15px;
+  padding-right: 7%;
+}
+.widget__day-icon {
+  width: 80%;
+}
+.widget__day-icon img {
+  width: 100%;
 }
 .widget__day:last-child {
   padding-right: 0px;
+}
+
+@media screen and (max-width: 959px) {
+  .widget {
+    font-size: 2vw;
+  }
+  .widget__container {
+    width: 21.75%;
+  }
+  .widget__item {
+    width: 100%;
+    height: 21.38vw;
+  }
+  .widget__day {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (max-width: 639px) {
+  .widget {
+    font-size: 3vw;
+  }
+  .widget__container {
+    width: 33.3333333%;
+  }
+  .widget__item {
+    width: 100%;
+    height: 32.5vw;
+  }
+  .widget__week {
+    height: 70%;
+  }
+  .widget__day {
+    font-size: 2vw;
+  }
 }
