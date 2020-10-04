@@ -48,7 +48,7 @@
   }
   &__week{
     background-color: $dark-red-color;
-    height: 50%;
+    height: 100%;
     width: 100%;
     padding: 0;
     display: flex;
@@ -60,7 +60,7 @@
   &__day{
     font-size: 0.8vw;
     height: 70%;
-    max-width:13%;
+    width:13%;
     display: flex;
     justify-content: space-between;
     align-items: center;
