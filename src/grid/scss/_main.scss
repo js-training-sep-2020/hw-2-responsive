@@ -1,73 +1,59 @@
-.widget{
+.widget {
   @include text-style;
   margin: 0 auto;
   padding: 150px 0;
   background: url("../../../img/bg-widget.png");
   background-position: center;
   background-size: cover;
-  &__container{
+  &__container {
     margin: auto;
     width: 43.2%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    display: -ms-grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
     box-shadow: 0 0 60px #000000;
   }
-  &__item{
+  &__item {
     width: 100%;
     height: 14.24vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    display: -ms-grid;
-    -ms-grid-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
     justify-items: center;
-    text-align: center;
-    @each $name, $color in $name-colors{
-        &_#{$name} {
+    @each $name, $color in $name-colors {
+      &_#{$name} {
         background: $color;
       }
     }
-    &_yellow, &_pink{
-      .widget__weather{ margin-bottom: 15%;}
+    &_yellow,
+    &_pink {
+      .widget__weather {
+        margin-bottom: 15%;
+      }
     }
-    &_pink{
-      .widget__icon{padding: 6%;}
-    }
-    @each $number in 1,2,3,4,5,6{
-      &:nth-child(#{$number}){
-        @if $number%3==0 {-ms-grid-column: 3;}
-        @else {-ms-grid-column: $number%3;}
-        @if $number/3<=1 {-ms-grid-row: 1;}
-        @else{-ms-grid-row: 2;}
+    &_pink {
+      .widget__icon {
+        padding: 6%;
       }
     }
   }
-  &__icon{
-      -ms-grid-column: 1;
-      -ms-grid-row: 1;
-      width: 43%;
-      margin-top: 20%;
-      img{
-        width: 100%;
-      }
-      &_small{
-        width:30%;
-        margin-top: 9%;
-        margin-bottom: 9%;
-      }
+  &__icon {
+    width: 43%;
+    margin-top: 20%;
+    img {
+      width: 100%;
+    }
+    &_small {
+      width: 30%;
+      margin-top: 9%;
+      margin-bottom: 9%;
+    }
   }
-  &__weather{
-    -ms-grid-column: 1;
-    -ms-grid-row: 2;
+  &__weather {
     margin-top: auto;
     margin-bottom: 18%;
   }
-  &__week{
+  &__week {
     background-color: $dark-red-color;
     height: 100%;
     width: 80%;
@@ -75,35 +61,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    display: -ms-grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr;
     justify-items: center;
     align-items: center;
     margin-top: auto;
     margin-bottom: 0px;
-    }
-  &__day{
+  }
+  &__day {
     font-size: 0.8vw;
     height: 80%;
-    width:100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    display: -ms-grid;
-    -ms-grid-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
   }
-  &__day-icon{
+  &__day-icon {
     width: 55%;
-    img{
+    img {
       width: 100%;
     }
   }
-  &__day:last-child{
+  &__day:last-child {
     padding-right: 0px;
   }
-
 }

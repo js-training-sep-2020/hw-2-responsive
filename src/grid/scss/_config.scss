@@ -4,10 +4,10 @@ $name-colors: (
   purple: #6139f6,
   yellow: #e3b63d,
   red: #dc3d66,
-  pink: #bd54cd
+  pink: #bd54cd,
 );
 
-@mixin text-style{
+@mixin text-style {
   font: {
     family: "Avenir Next";
     size: 1.12vw;
@@ -15,6 +15,6 @@ $name-colors: (
   }
   text-transform: uppercase;
   color: #ffffff;
-};
+}
 
 $dark-red-color: #b03153;

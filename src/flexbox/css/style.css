@@ -42,7 +42,8 @@
 .widget__item_pink {
   background: #bd54cd;
 }
-.widget__item_yellow .widget__weather, .widget__item_pink .widget__weather {
+.widget__item_yellow .widget__weather,
+.widget__item_pink .widget__weather {
   margin-bottom: 15%;
 }
 .widget__item_pink .widget__icon {
