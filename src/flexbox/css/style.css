@@ -95,6 +95,9 @@
 .widget__day:last-child {
   padding-right: 0px;
 }
+.widget__day:last-child .widget__day-icon {
+  margin-top: -10%;
+}
 
 @media screen and (max-width: 959px) {
   .widget {
@@ -143,5 +146,19 @@
   }
   .widget__day {
     font-size: 2.3vw;
+  }
+}
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .widget__icon {
+    height: 40%;
+  }
+  .widget__icon_small {
+    height: 85%;
+  }
+  .widget__day-icon {
+    height: 20%;
+  }
+  .widget__day:last-child .widget__day-icon {
+    margin-top: -20%;
   }
 }

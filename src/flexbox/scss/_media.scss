@@ -1,5 +1,3 @@
-@media screen and (max-width: 1199px) {
-}
 @media screen and (max-width: 959px) {
   .widget {
     font-size: 2vw;
@@ -46,6 +44,24 @@
     }
     &__day {
       font-size: 2.3vw;
+    }
+  }
+}
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .widget {
+    &__icon {
+      height: 40%;
+      &_small {
+        height: 85%;
+      }
+    }
+    &__day-icon {
+      height: 20%;
+    }
+    &__day:last-child {
+      .widget__day-icon {
+        margin-top: -20%;
+      }
     }
   }
 }

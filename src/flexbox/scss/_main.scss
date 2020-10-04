@@ -80,5 +80,8 @@
   }
   &__day:last-child {
     padding-right: 0px;
+    .widget__day-icon {
+      margin-top: -10%;
+    }
   }
 }
