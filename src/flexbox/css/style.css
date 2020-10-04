@@ -162,3 +162,9 @@
     margin-top: -20%;
   }
 }
+@media screen and (-ms-high-contrast: none) and (max-width: 639px),
+  screen and (-ms-high-contrast: active) and (max-width: 639px) {
+  .widget__icon_small {
+    height: 50%;
+  }
+}

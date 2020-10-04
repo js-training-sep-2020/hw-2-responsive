@@ -64,4 +64,11 @@
       }
     }
   }
+  @media screen and (max-width: 639px) {
+    .widget {
+      &__icon_small {
+        height: 50%;
+      }
+    }
+  }
 }
