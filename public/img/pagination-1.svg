@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         width="16px" height="16px">
-    <path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(255, 255, 255)" fill-opacity="1" fill="rgb(255, 255, 255)"
+    <path fill-rule="evenodd"  stroke-width="2px" stroke="rgb(255, 255, 255)" fill="rgb(255, 255, 255)"
           d="M8.000,4.000 C10.209,4.000 12.000,5.791 12.000,8.000 C12.000,10.209 10.209,12.000 8.000,12.000 C5.791,12.000 4.000,10.209 4.000,8.000 C4.000,5.791 5.791,4.000 8.000,4.000 Z"/>
 </svg>
