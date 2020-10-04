@@ -1,0 +1,398 @@
+@font-face {
+	font-family: 'ProximaNovaRegular';
+	src: url('fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.eot');
+	src: url('fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+	url('fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNovaBold';
+	src: url('fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.eot');
+	src: url('fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'),
+	url('fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceSansProLight';
+	src: url('fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.eot');
+	src: url('fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.eot?#iefix') format('embedded-opentype'),
+	url('fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.woff') format('woff'),
+	url('fonts/SourceSansPro/SourceSansProLight/SourceSansProLight.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceSansProRegular';
+	src: url('fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.eot');
+	src: url('fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.woff') format('woff'),
+	url('fonts/SourceSansPro/SourceSansProRegular/SourceSansProRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadProRegular';
+	src: url('fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot');
+	src: url('fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/MyriadPro/MyriadProRegular/MyriadProRegular.woff') format('woff'),
+	url('fonts/MyriadPro/MyriadProRegular/MyriadProRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$width: 30vw;
+$height: $width * 1.192;
+
+.weather-widget {
+		//local reset css
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	line-height: 1;
+
+	margin: $height*0.15 auto;
+
+	// widget-styles
+	@media screen and (min-width: 762px) {
+		width: 390px;
+		height: 464px;
+	}
+
+	@media screen and (max-width: 761px) {
+		width: 200px;
+		height: 180px;
+	}
+
+	border-radius: 10px;
+	background-color: #f1f8f9;
+	-webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+	box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+
+	display: grid;
+	@media screen and (min-width: 762px) {
+		grid-template-areas:
+			'refresh refresh refresh refresh refresh refresh refresh refresh refresh refresh refresh refresh'
+			'cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud cloud'
+			'degrees degrees degrees appearance appearance appearance appearance appearance appearance appearance date date'
+			'empty empty empty empty empty empty empty empty empty empty empty empty'
+			'pressure pressure pressure pressure dampness dampness dampness  dampness sunshine sunshine sunshine sunshine'
+			'nav nav nav nav nav nav nav nav nav nav nav nav';
+		grid-template-rows: 11.4% 40.5% 14.9% 3.9% 23.3% 6%;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	@media screen and (max-width: 761px) {
+		grid-template-areas:
+				'cloud cloud cloud pressure'
+				'cloud cloud cloud dampness'
+				'cloud cloud cloud sunshine'
+				'degrees appearance appearance date'
+				'nav nav nav nav';
+		grid-template-rows: 22% 22% 22% 22% 12%;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	&__refresh {
+		@media screen and (min-width: 762px) {
+			grid-area: refresh;
+			text-align: right;
+
+			img {
+				height: 18px;
+				margin-top: 15px;
+				margin-right: 15px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+			grid-area: 1/1;
+			text-align: left;
+
+			img {
+				height: 16px;
+				margin-top: 8px;
+				margin-left: 8px;
+			}
+		}
+
+		cursor: pointer;
+	}
+
+	&__cloud {
+		grid-area: cloud;
+		text-align: center;
+
+		img {
+			@media screen and (min-width: 762px) {
+				height: 121px;
+				margin-top: 15px;
+			}
+
+			@media screen and (max-width: 761px) {
+				height: 80px;
+				margin-top: 24px;
+			}
+		}
+	}
+
+	&__degrees {
+		grid-area: degrees;
+		text-align: center;
+
+		span {
+			font-family: 'ProximaNovaRegular';
+			color: #a5acaf;
+			vertical-align: middle;
+		}
+
+		@media screen and (min-width: 762px) {
+			span {
+				font-size: 50px;
+				line-height: 69px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+			span {
+				font-size: 25px;
+				line-height: 41px;
+			}
+		}
+	}
+
+	&__appearance {
+		grid-area: appearance;
+		text-align: left;
+
+		&--visibility {
+			font-family: 'SourceSansProLight';
+			color: #c2cacd;
+		}
+
+		&--location {
+			font-family: 'SourceSansProRegular';
+			color: #a2a9ad;
+		}
+
+
+		@media screen and (min-width: 762px) {
+
+			div {
+				margin-top: 8px;
+			}
+
+			&--visibility {
+				font-size: 24px;
+			}
+
+			&--location {
+				font-size: 16px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+
+			&--visibility {
+				margin-top: 8px;
+				font-size: 15px;
+			}
+
+			&--location {
+				margin-top: 2px;
+				font-size: 8px;
+			}
+		}
+	}
+
+	&__date {
+		background-color: #54BAE6;
+		grid-area: date;
+		text-align: center;
+
+		div {
+			font-family: 'MyriadProRegular';
+			font-weight: bold;
+			color: #ffffff;
+
+		}
+
+		@media screen and (min-width: 762px) {
+			font-size: 22px;
+			div {
+				padding-top: 8px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+			font-size: 12px;
+			div {
+				padding-top: 6px;
+			}
+		}
+
+	}
+
+	&__empty {
+		@media screen and (min-width: 762px) {
+			grid-area: empty;
+		}
+		@media screen and (max-width: 761px) {
+			display: none;
+		}
+	}
+
+	&__pressure {
+		background-color: #2E3335;
+		grid-area: pressure;
+		text-align: center;
+
+		img {
+			vertical-align: middle;
+		}
+
+		span {
+			vertical-align: middle;
+			font-family: 'ProximaNovaRegular';
+			font-weight: 700;
+			color: #ffffff;
+		}
+
+		@media screen and (min-width: 762px) {
+			img {
+				line-height: 108px;
+				height: 20px;
+			}
+			span {
+				line-height: 108px;
+				font-size: 14px;
+				padding-left: 5px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+
+			border-radius: 0 10px 0 0;
+
+			img {
+				line-height: 52px;
+				height: 8px;
+			}
+			span {
+				line-height: 52px;
+				font-size: 8px;
+			}
+		}
+	}
+
+	&__dampness {
+		background-color: #2E3335;
+		grid-area: dampness;
+		text-align: center;
+
+		img {
+			vertical-align: middle;
+		}
+
+		span {
+			vertical-align: middle;
+			font-family: 'ProximaNovaRegular';
+			font-weight: 700;
+			color: #ffffff;
+		}
+
+		@media screen and (min-width: 762px) {
+			img {
+				line-height: 108px;
+				height: 20px;
+			}
+			span {
+				line-height: 108px;
+				font-size: 14px;
+				padding-left: 5px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+			img {
+				line-height: 52px;
+				height: 8px;
+			}
+			span {
+				line-height: 52px;
+				font-size: 8px;
+			}
+		}
+	}
+
+	&__sunshine {
+		background-color: #2E3335;
+		grid-area: sunshine;
+		text-align: center;
+
+		img {
+			vertical-align: middle;
+		}
+
+		span {
+			vertical-align: middle;
+			font-family: 'ProximaNovaRegular';
+			font-weight: 700;
+			color: #ffffff;
+		}
+
+		@media screen and (min-width: 762px) {
+			img {
+				line-height: 108px;
+				height: 20px;
+			}
+			span {
+				line-height: 108px;
+				font-size: 14px;
+				padding-left: 5px;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+			img {
+				line-height: 52px;
+				height: 8px;
+			}
+			span {
+				line-height: 52px;
+				font-size: 8px;
+			}
+		}
+	}
+
+	&__nav {
+		background-color: #2E3335;
+		grid-area: nav;
+		text-align: center;
+		border-radius: 0 0 10px 10px;
+
+		@media screen and (min-width: 762px) {
+			img {
+				height: 15px;
+				cursor: pointer;
+			}
+		}
+
+		@media screen and (max-width: 761px) {
+			img {
+				height: 10px;
+				padding-top: 6px;
+			}
+		}
+	}
+}
