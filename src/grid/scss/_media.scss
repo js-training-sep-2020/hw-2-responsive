@@ -116,57 +116,27 @@
         }
       }
     }
+    &__day:last-child {
+      .widget__day-icon {
+        margin-top: -20%;
+      }
+    }
   }
 
   @media screen and (max-width: 959px) {
     .widget {
-      font-size: 2vw;
       &__container {
-        width: 21.75%;
         display: -ms-grid;
         -ms-grid-columns: 1fr;
         -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
       }
       &__item {
-        height: 21.38vw;
         @each $number in 1, 2, 3, 4, 5, 6 {
           &:nth-child(#{$number}) {
             -ms-grid-column: 1;
             -ms-grid-row: $number;
           }
         }
-      }
-      &__day {
-        font-size: 1.25vw;
-      }
-    }
-  }
-  @media screen and (max-width: 639px) {
-    .widget {
-      font-size: 3vw;
-      &__container {
-        width: 33.3333333%;
-      }
-      &__item {
-        height: 32.5vw;
-      }
-      &__day {
-        font-size: 2vw;
-      }
-    }
-  }
-  @media screen and (max-width: 479px) {
-    .widget {
-      font-size: 4vw;
-      &__container {
-        width: 45%;
-      }
-      &__item {
-        width: 100%;
-        height: 42.5vw;
-      }
-      &__day {
-        font-size: 2.3vw;
       }
     }
   }
