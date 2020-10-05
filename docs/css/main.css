@@ -1,0 +1,214 @@
+@font-face {
+    font-family: AvenirNext;
+    src: url(../fonts/AvenirNext.ttf);
+}
+
+
+/* common */
+
+body {
+    font-size: 18px;
+    font-family: AvenirNext;
+    color: #fff;
+}
+
+/* out widget styles */
+
+.cubes-section {
+    width: 100%;
+    height: 100vh;
+    min-width: 615px;
+    min-height: 410px;
+    background-image: url(../img/bg-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box; /*can i use */
+    padding-top: calc(50vh - 205px);
+}
+
+/*****************/
+/* widget */
+
+.widget {
+    width: 50%;/* 615px; */
+    height: 410px;
+    margin: 0 auto;
+    background-color: burlywood;
+}
+
+
+/* add responsive to our widget */
+@media screen and (max-width: 1000px) {
+    .widget {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .widget {
+        width: 80%;
+    }
+}
+
+
+
+    .widget-item {
+        padding: 35px 0;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* start setting background and icon colors */
+
+    .widget-item_chicago {
+        background-color: #69bee0;
+    }
+
+        .widget-item_chicago .widget-item__icon {
+            background-image: url(../img/CR\ Alt.png);
+            
+        }
+
+    .widget-item_seattle {
+        background-color: #8dd79a;
+    }
+
+        .widget-item_seattle .widget-item__icon {
+            background-image: url(../img/Fog.png);
+            
+        }
+
+    .widget-item_brooklyn {
+        background-color: #6e59f4;
+    }
+
+        .widget-item_brooklyn .widget-item__icon {
+            background-image: url(../img/CS.png);
+            
+        }
+
+    .widget-item_portland {
+        background-color: #dec057;
+    }
+
+        .widget-item_portland .widget-item__icon {
+            background-image: url(../img/CSS.png);
+            
+        }
+
+    .widget-item_new-york {
+        background-color: #c85777;
+    }
+
+        .widget-item_new-york .widget-item__icon {
+            background-image: url(../img/CWM.png);
+            
+        }
+
+    .widget-item_san-jose {
+        background-color: #b56fd2;
+    }
+
+    
+        .widget-item_san-jose .widget-item__icon {
+            background-image: url(../img/Cloud.png);
+            
+        }
+
+    /* finish setting background and icon colors */
+
+        .widget-item__icon {
+            width: 90px;
+            height: 90px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto 15px;
+            transition-property: transform;
+            transition-duration: 0.5s;
+        }
+
+        .widget-item__info {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+
+
+    /* four-day forecast */
+
+    .widget-item__forecast {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.37);
+        font-size: 12px;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 10px;
+        transition-property: bottom;
+        transition-duration: 0.5s; 
+        visibility: hidden;
+    }
+
+        .widget-item__day {
+            float: left;
+            width: 25%;
+            padding-top: 25px;
+        }
+
+        
+
+        .widget-item__day-icon {
+            width: 32px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            margin: 0 auto;
+        }
+
+        .widget-item__day * {
+            margin-bottom: 5px;
+        }
+
+        .widget-item__day:nth-child(1) .widget-item__day-icon {
+            background-image: url(../img/CR\ Alt.png);
+        }
+
+        .widget-item__day:nth-child(2) .widget-item__day-icon {
+            background-image: url(../img/CR\ Alt.png);
+        }
+
+        .widget-item__day:nth-child(3) .widget-item__day-icon {
+            background-image: url(../img/Cloud.png);
+        }
+
+        .widget-item__day:nth-child(4) .widget-item__day-icon {
+            background-image: url(../img/CS.png);
+        }
+
+
+    /* hover styles */
+    
+
+    .widget-item:hover:hover .widget-item__forecast {
+        display: block;
+        visibility: visible;
+        bottom: 0;
+    }
+
+    .widget-item:hover:hover .widget-item__info {
+        visibility: hidden;
+    }
+
+    .widget-item:hover:hover .widget-item__icon {
+        transform: scale(0.6) translateY(-20px);
+    }
+
+/****************/
+
