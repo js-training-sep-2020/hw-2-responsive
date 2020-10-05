@@ -1,0 +1,28 @@
+{
+  "name": "hw-2-responsive",
+  "version": "1.0.0",
+  "description": "У вас уже есть готовый сверстанный погодный виджет с прошлого ДЗ. Теперь надо сверстать его адаптивно в 2 вариантах:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClintEastwood1996/hw-2-responsive.git"
+  },
+  "keywords": [
+    "home",
+    "work",
+    "epam",
+    "js-core"
+  ],
+  "author": "Magomed Gasanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClintEastwood1996/hw-2-responsive/issues"
+  },
+  "homepage": "https://github.com/ClintEastwood1996/hw-2-responsive#readme"
+}
