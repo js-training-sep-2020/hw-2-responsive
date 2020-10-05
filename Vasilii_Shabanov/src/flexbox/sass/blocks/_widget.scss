@@ -23,13 +23,19 @@
         &__icon {
             margin: 46px 58px 26px 57px;
 
-            &_margin {
+            &_nomargin {
+                margin: 0;
+            }
+
+            &_hasmargin {
                 margin-top: 40px;
                 margin-bottom: 25px;
             }
 
-            &_cloudwindmoon {
-                margin: 24px 74px 17px 68px;
+            &_theme {
+                &-cloudwindmoon {
+                    margin: 24px 74px 17px 68px;
+                }
             }
         }
 

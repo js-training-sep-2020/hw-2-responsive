@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
@@ -15,15 +17,11 @@ gulp.task('server', function () {
         }
     });
 
-
-    gulp.watch("src/flexbox/**/*.less", gulp.series("css-flex"));
-    gulp.watch("src/grid/**/*.less", gulp.series("css-grid"));
-    gulp.watch("src/flexbox/*.html").on('change', browserSync.reload);
-    gulp.watch("src/grid/*.html").on('change', browserSync.reload);
+    gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
 gulp.task("css-flex", function () {
-    return gulp.src("src/flexbox/sass/**/*.+(scss|sass)")
+    return gulp.src("src/flexbox/sass/style.scss")
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -59,15 +57,12 @@ gulp.task("css-grid", function () {
 gulp.task('watch', function () {
     gulp.watch("src/flexbox/sass/**/*.+(scss|sass|css)", gulp.parallel("css-flex"));
     gulp.watch("src/grid/sass/**/*.+(scss|sass|css)", gulp.parallel("css-grid"));
-    gulp.watch("src/flexbox/*.html").on('change', gulp.parallel('html'));
-    gulp.watch("src/grid/*.html").on('change', gulp.parallel('html'));
+    gulp.watch("src/*.html").on('change', gulp.parallel('html'));
+
 });
 
 gulp.task('html', () => {
-    return gulp.src([
-            'src/flexbox/*.html',
-            'src/grid/*.html'
-        ])
+    return gulp.src('src/*.html')
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
@@ -90,7 +85,9 @@ gulp.task('images', () => {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task("build-flex", gulp.series(
+gulp.task("build-flex", gulp.parallel(
+    'watch',
+    'server',
     "icons",
     "fonts",
     "css-flex",
@@ -98,7 +95,9 @@ gulp.task("build-flex", gulp.series(
     "html"
 ));
 
-gulp.task("build-grid", gulp.series(
+gulp.task("build-grid", gulp.parallel(
+    'watch',
+    'server',
     "icons",
     "fonts",
     "css-grid",
@@ -106,5 +105,5 @@ gulp.task("build-grid", gulp.series(
     "html"
 ));
 
-gulp.task("start-flex", gulp.series("build-flex", "server"));
-gulp.task("start-grid", gulp.series("build-grid", "server"));
+gulp.task("start-flex", gulp.parallel("build-flex"));
+gulp.task("start-grid", gulp.parallel("build-grid"));
