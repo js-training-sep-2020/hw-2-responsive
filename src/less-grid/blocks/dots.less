@@ -1,0 +1,37 @@
+.dots {
+  width: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+}
+
+.dots__item {
+  width: 7px;
+  height: 7px;
+  border: 2px solid @main-color;
+  border-radius: 50%;
+  box-sizing: content-box;
+  place-self: center;
+
+  &&--checked {
+    border: none;
+    background-color: #fff;
+  }
+  
+  &:first-child {
+    grid-column: 1;
+  }
+  &:nth-child(2) {
+    grid-column: 2;
+  }
+  &:last-child {
+    grid-column: 3;
+  }
+}
+
+@media all and (min-width: @tablet-width) {
+  .dots {
+    display: none;
+  }
+}
