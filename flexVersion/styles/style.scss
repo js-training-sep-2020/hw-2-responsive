@@ -1,17 +1,13 @@
 @import "_reset.scss";
 @import "_bg.scss";
 
-.weather-widget__center-block {
-   height: 15vh;
-   @media (max-width: 620px) {
-      height: 0px;
-      transition: 500ms;
-   }
-}
-
 .weather-widget {  
    max-width: 621px;
-   margin: 0px auto;
+   margin: 15vh auto;
+   @media (max-width: 620px) {
+      margin: 0px auto;
+      transition: 500ms;
+   }
 }
 .weather-widget__body{
    display: flex;
