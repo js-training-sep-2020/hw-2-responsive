@@ -51,6 +51,18 @@
       max-width: 100%;
       width: 85px;
       height: auto;
+      @media (max-width: 620px) {
+         max-width: 50%;
+      }
+      @media (max-width: 580px) {
+         max-width: 80%;
+      }
+      @media (max-width: 413px) {
+         max-width: 50%;
+      }
+      @media (max-width: 300px) {
+         max-width: 80%;
+      }
    }
    &_less {
       margin: 5px;
@@ -76,7 +88,6 @@
 .weather-widget__week-temperature {  
    display: none; 
    height: 50%;
-   margin-bottom: 10%;
    padding: 0px 10%;
    .weather-widget__day {
       display: flex;
