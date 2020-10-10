@@ -1,0 +1,177 @@
+.widget {
+  font-family: "Avenir Next";
+  font-size: 1.12vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 150px 0;
+  background: url("../../../img/bg-widget.png");
+  background-position: center;
+  background-size: cover;
+}
+.widget__container {
+  margin: auto;
+  width: 43.2%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 60px #000000;
+}
+.widget__item {
+  width: calc(100% / 3);
+  height: 14.24vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.widget__item_blue {
+  background: #06b3db;
+}
+.widget__item_green {
+  background: #4ed486;
+}
+.widget__item_purple {
+  background: #6139f6;
+}
+.widget__item_yellow {
+  background: #e3b63d;
+}
+.widget__item_red {
+  background: #dc3d66;
+}
+.widget__item_pink {
+  background: #bd54cd;
+}
+.widget__item_yellow .widget__weather,
+.widget__item_pink .widget__weather {
+  margin-bottom: 15%;
+}
+.widget__item_pink .widget__icon {
+  padding: 6%;
+}
+.widget__icon {
+  width: 43%;
+  margin-top: 20%;
+}
+.widget__icon img {
+  width: 100%;
+}
+.widget__icon_small {
+  width: 30%;
+  margin-top: 9%;
+  margin-bottom: 9%;
+}
+.widget__weather {
+  margin-top: auto;
+  margin-bottom: 18%;
+}
+.widget__week {
+  background-color: #b03153;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 0px;
+}
+.widget__day {
+  font-size: 0.8vw;
+  height: 70%;
+  width: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 7%;
+}
+.widget__day-icon {
+  width: 80%;
+}
+.widget__day-icon img {
+  width: 100%;
+}
+.widget__day:last-child {
+  padding-right: 0px;
+}
+.widget__day:last-child .widget__day-icon {
+  margin-top: -10%;
+}
+
+@media screen and (max-width: 959px) {
+  .widget {
+    font-size: 2vw;
+  }
+  .widget__container {
+    width: 43.5%;
+  }
+  .widget__item {
+    width: 50%;
+    height: 21.38vw;
+  }
+  .widget__day {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (max-width: 639px) {
+  .widget {
+    font-size: 3vw;
+  }
+  .widget__container {
+    width: calc(100% / 3);
+  }
+  .widget__item {
+    width: 100%;
+    height: 32.5vw;
+  }
+  .widget__week {
+    height: 70%;
+  }
+  .widget__day {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 479px) {
+  .widget {
+    font-size: 4vw;
+  }
+  .widget__container {
+    width: 45%;
+  }
+  .widget__item {
+    height: 42.5vw;
+  }
+  .widget__week {
+    height: 70%;
+  }
+  .widget__day {
+    font-size: 2.3vw;
+  }
+}
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .widget__icon {
+    height: 40%;
+  }
+  .widget__icon_small {
+    height: 85%;
+  }
+  .widget__day-icon {
+    height: 20%;
+  }
+  .widget__day:last-child .widget__day-icon {
+    margin-top: -20%;
+  }
+}
+@media screen and (-ms-high-contrast: none) and (min-width: 959px),
+  screen and (-ms-high-contrast: active) and (min-width: 959px) {
+  .widget__item {
+    width: 33.3%;
+  }
+}
+@media screen and (-ms-high-contrast: none) and (max-width: 639px),
+  screen and (-ms-high-contrast: active) and (max-width: 639px) {
+  .widget__icon_small {
+    height: 50%;
+  }
+}

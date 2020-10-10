@@ -1,0 +1,87 @@
+.widget {
+  @include text-style;
+  margin: 0 auto;
+  padding: 150px 0;
+  background: url("../../../img/bg-widget.png");
+  background-position: center;
+  background-size: cover;
+  &__container {
+    margin: auto;
+    width: 43.2%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 60px #000000;
+  }
+  &__item {
+    width: calc(100% / 3);
+    height: 14.24vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @each $name, $color in $name-colors {
+      &_#{$name} {
+        background: $color;
+      }
+    }
+    &_yellow,
+    &_pink {
+      .widget__weather {
+        margin-bottom: 15%;
+      }
+    }
+    &_pink {
+      .widget__icon {
+        padding: 6%;
+      }
+    }
+  }
+  &__icon {
+    width: 43%;
+    margin-top: 20%;
+    img {
+      width: 100%;
+    }
+    &_small {
+      width: 30%;
+      margin-top: 9%;
+      margin-bottom: 9%;
+    }
+  }
+  &__weather {
+    margin-top: auto;
+    margin-bottom: 18%;
+  }
+  &__week {
+    background-color: $dark-red-color;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 0px;
+  }
+  &__day {
+    font-size: 0.8vw;
+    height: 70%;
+    width: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 7%;
+  }
+  &__day-icon {
+    width: 80%;
+    img {
+      width: 100%;
+    }
+  }
+  &__day:last-child {
+    padding-right: 0px;
+    .widget__day-icon {
+      margin-top: -10%;
+    }
+  }
+}
