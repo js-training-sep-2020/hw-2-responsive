@@ -2,9 +2,9 @@
   .widget {
     font-size: 2vw;
     &__container {
-      width: 21.75%;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      width: 43.5%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
     }
     &__item {
       height: 21.38vw;
@@ -18,7 +18,9 @@
   .widget {
     font-size: 3vw;
     &__container {
-      width: 33.3333333%;
+      width: calc(100% / 3);
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
     }
     &__item {
       height: 32.5vw;
@@ -124,6 +126,25 @@
   }
 
   @media screen and (max-width: 959px) {
+    .widget {
+      &__container {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr;
+      }
+      &__item {
+        @for $row from 1 through 3 {
+          @for $column from 1 through 2 {
+            &:nth-child(#{($row - 1)*2 + $column}) {
+              -ms-grid-column: $column;
+              -ms-grid-row: $row;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 639px) {
     .widget {
       &__container {
         display: -ms-grid;

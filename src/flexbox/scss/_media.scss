@@ -2,10 +2,10 @@
   .widget {
     font-size: 2vw;
     &__container {
-      width: 21.75%;
+      width: 43.5%;
     }
     &__item {
-      width: 100%;
+      width: 50%;
       height: 21.38vw;
     }
     &__day {
@@ -17,9 +17,10 @@
   .widget {
     font-size: 3vw;
     &__container {
-      width: 33.3333333%;
+      width: calc(100% / 3);
     }
     &__item {
+      width: 100%;
       height: 32.5vw;
     }
     &__week {
@@ -61,6 +62,13 @@
     &__day:last-child {
       .widget__day-icon {
         margin-top: -20%;
+      }
+    }
+  }
+  @media screen and (min-width: 959px) {
+    .widget {
+      &__item {
+        width: 33.3%;
       }
     }
   }

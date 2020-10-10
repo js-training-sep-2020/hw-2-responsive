@@ -9,8 +9,8 @@
     margin: auto;
     width: 43.2%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     box-shadow: 0 0 60px #000000;
   }
   &__item {
@@ -18,7 +18,7 @@
     height: 14.24vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     justify-items: center;
     @each $name, $color in $name-colors {
       &_#{$name} {
@@ -59,7 +59,7 @@
     width: 80%;
     padding: 0 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
@@ -72,7 +72,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
   }
