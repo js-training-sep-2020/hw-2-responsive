@@ -7,9 +7,9 @@ $square: 200px
 $square-large: 300px
 
 $margin-text: 30px
-$margin-icon: 30px
+$margin-icon: 45px
 $icon: 60px
-$column-icon: 25px
+$column-icon: 20px
 $padding-column-icon: 10px
 $margin-first-icon: 20px
 
@@ -34,7 +34,9 @@ main
   display: grid
   display: -ms-grid
   justify-content: center
+  text-align: center
   align-items: center
+  flex-direction: row
 
 .widget
   display: -ms-grid
@@ -46,7 +48,7 @@ main
   grid-auto-rows: $square
   box-shadow: 10px -10px 50px rgba(0, 0, 0, 0.2), 10px 10px 50px rgba(0, 0, 0, 0.2), -10px -10px 50px rgba(0, 0, 0, 0.2), -10px 10px 50px rgba(0, 0, 0, 0.2)
   text-align: center
-  margin: 0 auto
+  margin: auto
 
   &__square
     &--blue
@@ -71,6 +73,7 @@ main
       background-color: #bd3559
 
     justify-content: center
+    align-items: center
     min-width: $square
 
     &:nth-child(1)
@@ -117,10 +120,10 @@ main
     height: 50%
 
   &__secondPart
-    display: -ms-grid
-    -ms-grid-columns: 1fr 1fr 1fr 1fr
+    width: 100%
+    -ms-grid-columns: 50px 50px 50px 50px
     display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: 50px 50px 50px 50px
 
   &__column-icon
     height: $column-icon
@@ -129,8 +132,11 @@ main
   &__first-icon
     margin-top: $margin-first-icon
 
-  &__column-text
-    @include fontStyle(1em)
+  &__column__day, &__column__temperature
+    @include fontStyle(0.8em)
+
+  &__column__day
+    margin-top: 12px
 
   &__column
     &:nth-child(1)
@@ -157,12 +163,16 @@ main
     grid-template-columns: repeat(auto-fill, minmax($square-large, 1fr))
     grid-auto-rows: $square-large
 
+    &__secondPart
+      -ms-grid-columns: 75px 75px 75px 75px
+      display: grid
+      grid-template-columns: 75px 75px 75px 75px
+
     &__text
       font-size: 1.7em
-      margin-top: $margin-text * 2
 
     &__icon
-      margin-top: $margin-icon * 2
+      margin-top: $margin-icon + 25px
       height: $icon + 30px
 
     &__column-icon
