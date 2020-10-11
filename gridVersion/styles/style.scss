@@ -1,6 +1,5 @@
 @import "_reset.scss";
 @import "_bg.scss";
-@import "_forIE11.scss";
 
 .weather-widget {  
    max-width: 621px;
@@ -93,3 +92,5 @@
       grid-template: 1fr 1fr 1fr / 1fr;
    }
 }
+
+@import "_forIE11.scss";
