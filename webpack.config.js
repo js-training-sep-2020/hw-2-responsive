@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new miniCss({
-      filename: 'weather-widget-css-grid.css',
+      filename: 'weather-widget.css',
     }),
   ]
 };
