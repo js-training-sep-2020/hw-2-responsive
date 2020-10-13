@@ -1,0 +1,310 @@
+@import "../css/fonts.css"
+
+$font-stack: 'AvenirNextCyr-Medium', serif
+$font-color: white
+
+$square: 200px
+$square-little: 100px
+$square-middle: 150px
+$square-large: 300px
+
+$icon: 60px
+$icon-little: 60px
+$icon-middle: 35px
+$icon-large: 90px
+
+$icon-column: 25px
+$icon-column-little: 15px
+$icon-column-middle: 10px
+$icon-column-large: 35px
+
+@mixin fontStyle($f)
+  font-size: $f
+  color: $font-color
+  font-family: $font-stack
+
+body
+  background: url("../image/background/backgroundImage.png") no-repeat center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+  .allScreen
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .widget
+    margin: auto
+    width: 100%
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    display: flex
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    flex-flow: row wrap
+    -webkit-flex-flow: row wrap
+    max-width: $square * 3
+    height: $square * 2
+
+    &__square
+      width: $square
+      height: $square
+      text-align: center
+
+      &--blue
+        background-color: #06b3db
+
+      &--green
+        background-color: #4ed486
+
+      &--darkBlue
+        background-color: #6139f6
+
+      &--yellow
+        background-color: #e3b63d
+
+      &--pink
+        background-color: #dc3d66
+
+      &--purple
+        background-color: #bd54cd
+
+      &--darkPink
+        background-color: #bd3559
+
+    &__icon
+      height: $icon
+      margin-top: $icon
+
+    &__text
+      align-items: center
+      justify-content: center
+      @include fontStyle(1em)
+      margin-top: 30px
+
+    &__row
+      display: flex
+      flex-flow: row wrap
+      width: $square
+      height: $square
+
+    &__firstPart, &__secondPart
+      width: 100%
+      height: 50%
+
+    &__secondPart
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      justify-content: space-around
+      padding: 0 10px
+      margin: 0
+
+    &__column
+      width: 20%
+      height: 100%
+      list-style: none
+      padding: 5px 0
+      margin: 0 auto
+
+      &__day, &__temperature
+        @include fontStyle(0.7em)
+
+    &__column-icon
+      height: 15px
+
+    &__first-icon
+      height: $icon
+      margin-top: 20px
+
+
+  @media screen and (min-width: 1700px)
+    .widget
+      max-width: $square-large * 3
+      height: $square-large * 2
+
+      &__square
+        width: $square-large
+        height: $square-large
+
+      &__icon
+        height: $icon-large
+        margin-top: $icon-large
+
+      &__text
+        font-size: 1.6em
+        margin-top: 40px
+
+      &__row
+        width: $square-large
+        height: $square-large
+
+      &__column
+        &__day, &__temperature
+          font-size: 1.2em
+
+      &__first-icon
+        height: $icon-large
+        margin-top: 30px
+
+      &__column-icon
+        height: $icon-column-large
+
+  @media screen and (max-width: 830px) and (max-height: 415px)
+    .widget
+      max-width: $square-middle * 3
+      height: $square-middle * 2
+
+      &__square
+        width: $square-middle
+        height: $square-middle
+        text-align: center
+
+      &__icon
+        height: 40px
+        margin-top: $icon-middle
+
+      &__text
+        font-size: 0.8em
+        margin-top: 30px
+
+      &__row
+        width: $square-middle
+        height: $square-middle
+
+      &__column-icon
+        height: 18px
+
+      &__column
+        &__day, &__temperature
+          font-size: 0.6em
+
+      &__first-icon
+        height: $icon-middle
+        margin-top: 20px
+
+  @media screen and (max-width: 660px)
+    .widget
+      max-width: 360px
+      height: 240px
+
+      &__square
+        width: 120px
+        height: 120px
+        text-align: center
+
+      &__icon
+        height: $icon-middle
+        margin-top: $icon-middle
+
+      &__text
+        font-size: 0.6em
+        margin-top: 20px
+
+      &__row
+        width: 120px
+        height: 120px
+
+      &__column-icon
+        height: $icon-column-middle
+        margin-top: -9px
+
+      &__column
+        &__day, &__temperature
+          font-size: 0.5em
+
+      &__first-icon
+        height: $icon-middle
+        margin-top: 20px
+
+      &__column
+        margin: 0 auto
+
+        &__day, &__temperature
+          @include fontStyle(0.5em)
+
+        &__day
+          margin: 5px 0
+
+  @media screen and (max-width: 370px)
+    .widget
+      max-width: $square-little * 3
+      height: $square-little * 2
+
+      &__square
+        width: $square-little
+        height: $square-little
+
+      &__icon
+        height: $icon-little
+        margin-top: 20px
+
+      &__text
+        font-size: 0.5em
+        margin-top: 20px
+
+      &__row
+        width: $square-little
+        height: $square-little
+
+      &__column-icon
+        height: $icon-column-little
+
+      &__column
+        &__day, &__temperature
+          font-size: 0.4em
+
+      &__first-icon
+        height: $icon-little
+        margin-top: 5px
+
+    @media screen and (max-width: 281px) and (max-height: 655px)
+    .widget
+      width: 200px
+      height: 1200px
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: row
+
+      &__square
+        width: 200px
+        height: 200px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+      &__icon
+        height: $icon-little
+
+      &__text
+        font-size: 1em
+        margin-top: 25px
+
+      &__row
+        width: 200px
+        height: 200px
+
+      &__column-icon
+        height: 20px
+        margin-top: 5px
+
+      &__column
+        &__day, &__temperature
+          font-size: 0.8em
+
+      &__first-icon
+        height: $icon-little
+        margin-top: 20px

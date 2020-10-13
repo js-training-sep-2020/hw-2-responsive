@@ -1,0 +1,253 @@
+@import "../css/fonts.css"
+
+$font-stack: 'AvenirNextCyr-Medium', serif
+$font-color: white
+
+$square: 200px
+$square-large: 300px
+
+$margin-text: 30px
+$margin-icon: 45px
+$icon: 60px
+$column-icon: 20px
+$padding-column-icon: 10px
+$margin-first-icon: 20px
+
+@mixin fontStyle($f)
+  font-size: $f
+  color: $font-color
+  font-family: $font-stack
+
+*
+  margin: 0
+
+body
+  background: url("../image/background/backgroundImage.png") no-repeat center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+main
+  width: 100vw
+  height: 100vh
+  display: grid
+  display: -ms-grid
+  justify-content: center
+  text-align: center
+  align-items: center
+  flex-direction: row
+
+.widget
+  display: -ms-grid
+  display: grid
+  max-width: $square * 3
+  -ms-grid-columns: $square $square $square
+  -ms-grid-rows: $square $square
+  grid-template-columns: repeat(auto-fill, minmax($square, 1fr))
+  grid-auto-rows: $square
+  box-shadow: 10px -10px 50px rgba(0, 0, 0, 0.2), 10px 10px 50px rgba(0, 0, 0, 0.2), -10px -10px 50px rgba(0, 0, 0, 0.2), -10px 10px 50px rgba(0, 0, 0, 0.2)
+  text-align: center
+  margin: auto
+
+  &__square
+    &--blue
+      background-color: #06b3db
+
+    &--green
+      background-color: #4ed486
+
+    &--darkBlue
+      background-color: #6139f6
+
+    &--yellow
+      background-color: #e3b63d
+
+    &--pink
+      background-color: #dc3d66
+
+    &--purple
+      background-color: #bd54cd
+
+    &--darkPink
+      background-color: #bd3559
+
+    justify-content: center
+    align-items: center
+    min-width: $square
+
+    &:nth-child(1)
+      -ms-grid-column: 1
+      -ms-grid-row: 1
+
+    &:nth-child(2)
+      -ms-grid-column: 2
+      -ms-grid-row: 1
+
+    &:nth-child(3)
+      -ms-grid-column: 3
+      -ms-grid-row: 1
+
+    &:nth-child(4)
+      -ms-grid-column: 1
+      -ms-grid-row: 2
+
+    &:nth-child(5)
+      -ms-grid-column: 2
+      -ms-grid-row: 2
+
+    &:nth-child(6)
+      -ms-grid-column: 3
+      -ms-grid-row: 2
+
+  & > *:first-child
+    grid-row: 1 / 1
+    grid-column: 1 / 1
+
+  &__text
+    @include fontStyle(1em)
+    margin-top: $margin-text
+
+  &__icon
+    margin-top: $margin-icon
+    height: $icon
+
+  &__row
+    height: 100%
+    grid-template-rows: 100% 100%
+
+  &__firstPart, &__secondPart
+    height: 50%
+
+  &__secondPart
+    width: 100%
+    -ms-grid-columns: 50px 50px 50px 50px
+    display: grid
+    grid-template-columns: 50px 50px 50px 50px
+
+  &__column-icon
+    height: $column-icon
+    padding: $padding-column-icon
+
+  &__first-icon
+    margin-top: $margin-first-icon
+
+  &__column__day, &__column__temperature
+    @include fontStyle(0.8em)
+
+  &__column__day
+    margin-top: 12px
+
+  &__column
+    &:nth-child(1)
+      -ms-grid-column: 1
+      -ms-grid-row: 1
+
+    &:nth-child(2)
+      -ms-grid-column: 2
+      -ms-grid-row: 1
+
+    &:nth-child(3)
+      -ms-grid-column: 3
+      -ms-grid-row: 1
+
+    &:nth-child(4)
+      -ms-grid-column: 4
+      -ms-grid-row: 1
+
+@media screen and (min-width: 1700px)
+  .widget
+    max-width: $square-large * 3
+    -ms-grid-columns: $square-large $square-large $square-large
+    -ms-grid-rows: $square-large $square-large
+    grid-template-columns: repeat(auto-fill, minmax($square-large, 1fr))
+    grid-auto-rows: $square-large
+
+    &__secondPart
+      -ms-grid-columns: 75px 75px 75px 75px
+      display: grid
+      grid-template-columns: 75px 75px 75px 75px
+
+    &__text
+      font-size: 1.7em
+
+    &__icon
+      margin-top: $margin-icon + 25px
+      height: $icon + 30px
+
+    &__column-icon
+      height: $column-icon * 2
+      padding: $padding-column-icon
+
+    &__first-icon
+      height: $icon + 30px
+      margin-top: $margin-first-icon * 2
+
+    &__column-text
+      font-size: 1.5em
+
+@media screen and (max-width: 700px)
+  .widget
+    max-width: $square * 2
+
+    &__square
+      &:nth-child(1)
+        -ms-grid-column: 1
+        -ms-grid-row: 1
+
+      &:nth-child(1)
+        -ms-grid-column: 1
+        -ms-grid-row: 1
+
+      &:nth-child(2)
+        -ms-grid-column: 2
+        -ms-grid-row: 1
+
+      &:nth-child(3)
+        -ms-grid-column: 1
+        -ms-grid-row: 2
+
+      &:nth-child(4)
+        -ms-grid-column: 2
+        -ms-grid-row: 2
+
+      &:nth-child(5)
+        -ms-grid-column: 1
+        -ms-grid-row: 3
+
+      &:nth-child(6)
+        -ms-grid-column: 2
+        -ms-grid-row: 3
+
+@media screen and (max-width: 446px)
+  .widget
+    max-width: $square
+    -ms-grid-columns: $square
+    -ms-grid-rows: $square $square $square $square $square $square
+    grid-template-columns: repeat(auto-fill, minmax($square, 1fr))
+    grid-auto-rows: $square
+
+    &__square
+      &:nth-child(1)
+        -ms-grid-column: 1
+        -ms-grid-row: 1
+
+      &:nth-child(2)
+        -ms-grid-column: 1
+        -ms-grid-row: 2
+
+      &:nth-child(3)
+        -ms-grid-column: 1
+        -ms-grid-row: 3
+
+      &:nth-child(4)
+        -ms-grid-column: 1
+        -ms-grid-row: 4
+
+      &:nth-child(5)
+        -ms-grid-column: 1
+        -ms-grid-row: 5
+
+      &:nth-child(6)
+        -ms-grid-column: 1
+        -ms-grid-row: 6
