@@ -28,7 +28,7 @@ const optimization = () => {
 }
 
 const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
-const outputDirectoru = 'docs';
+const outputDirectoru = 'dist';
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
