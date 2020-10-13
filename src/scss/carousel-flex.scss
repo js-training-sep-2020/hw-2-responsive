@@ -3,7 +3,6 @@
 .carousel {
   @include box-sizing(border-box);
   @include flex();
-  height: 108px;
   width: 100%;
   text-align: center;
   background: rgba(0, 0, 0, 0.3);
@@ -13,23 +12,25 @@
   }
 }
 
-.carousel_size_m {
-  padding: 0 24px;
+.carousel_size_s {
+  padding: 8px 8px;
 }
 
 .carousel__nav-arrows {
   width: 16px;
-  height: 108px;
+  line-height: 100%;
   margin: 0 4px;
   cursor: pointer;
 }
 
 .carousel__nav-arrows_left {
   background: center no-repeat url("../img/icon_arrow_left.png");
+  margin-right: 16px;
 }
 
 .carousel__nav-arrows_right {
   background: center no-repeat url("../img/icon_arrow_right.png");
+  margin-left: 16px;
 }
 
 .carousel__forecast-container {
@@ -46,22 +47,21 @@
 
 .carousel__divider {
   width: 0;
-  height: 80px;
-  margin: 14px 0;
+  line-height: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .carousel__day-of-week {
-  padding: 10px 4px 0;
+  padding: 0 4px 0;
 }
 
 .carousel__temperature {
   padding: 0 0 0 8px;
 }
 
-.weather-icon {
-  width: 48px;
-  height: 36px;
+.weather-icon_size_s {
+  width: 40px;
+  height: 30px;
 }
 
 .carousel__weather-icon {
@@ -70,25 +70,44 @@
 
 .weather-icon__rain {
   background: url("../img/icon_weather_rain.png");
+  background-size: cover;
 }
 
 .weather-icon__cloudy {
   background: url("../img/icon_weather_cloudy.png");
+  background-size: cover;
 }
 
 .weather-icon__sunny {
   background: url("../img/icon_weather_sunny.png");
+  background-size: cover;
 }
 
 .weather-icon__overcast {
   background: url("../img/icon_weather_overcast.png");
+  background-size: cover;
+}
+
+// For the medium widget
+
+@media only screen and (min-width: 769px) {
+  .carousel_size_m {
+    height: 108px;
+    padding: 10px 24px;
+  }
+
+  .weather-icon {
+    width: 48px;
+    height: 36px;
+  }
 }
 
 // For the large (original) widget
 
 @media only screen and (min-width: 1280px) {
   .carousel_size_l {
-    padding: 0 52px;
+    height: 108px;
+    padding: 10px 52px;
   }
 }
 
