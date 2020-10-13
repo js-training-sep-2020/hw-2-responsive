@@ -1,9 +1,3 @@
-// .some-content is for demonstration only
-// Have to be removed in real project
-.some-content {
-  visibility: hidden;
-}
-
 html, body {
   height: 100%;
 }
@@ -12,14 +6,6 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(20, 44, 61, 0.75)), to(rgba(20, 44, 61, 0.75))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(0, 0, 0, 0.4))), #2A2D3E no-repeat;
   background: -o-linear-gradient(bottom, rgba(20, 44, 61, 0.75), rgba(20, 44, 61, 0.75)), -o-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #2A2D3E no-repeat;
   background: linear-gradient(0deg, rgba(20, 44, 61, 0.75), rgba(20, 44, 61, 0.75)), linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #2A2D3E no-repeat;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  height: 0;
 }
 
 .page {
@@ -31,52 +17,9 @@ body {
   }
 }
 
-.page__row {
-  min-height: 16px;
-}
-
-// Small smartphones (mobile first)
-
-[class*="col-"] {
-  float: left;
+.page__widget-container {
+  display: flex;
   width: 100%;
-}
-
-// Tablets and large smartphones
-
-@media only screen and (min-width: 481px) {
-  [class*="col-"] {
-    padding: 0 8px;
-  }
-
-  .col-s-4 {
-    width: 33.33%;
-  }
-
-  .col-s-8 {
-    width: 66.66%;
-  }
-}
-
-// Laptops, larger tablets in landscape, small desktops
-
-@media only screen and (min-width: 769px) {
-  .col-m-6 {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .page_l {
-    margin: 0 auto;
-    max-width: 2120px;
-  }
-
-  .col-l-4 {
-    width: 33.33%;
-  }
-
-  .col-l-8 {
-    width: 66.66%;
-  }
+  padding: 10%;
+  justify-content: center;
 }
