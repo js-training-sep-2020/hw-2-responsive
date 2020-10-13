@@ -1,5 +1,5 @@
-import './scss/weather-widget-grid.scss';
-// import './scss/weather-widget-flex.scss'
+// import './scss/weather-widget-grid.scss';
+import './scss/weather-widget-flex.scss'
 
 import './img/bg_paris.jpg';
 import './img/icon_arrow_left.png';

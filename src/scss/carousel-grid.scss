@@ -17,6 +17,7 @@
 
 .carousel_size_s {
   padding: 8px 8px;
+  height: 94px;
 }
 
 .carousel__nav-arrows {
@@ -42,8 +43,7 @@
 
 .carousel__forecast-container {
   @include grid;
-  grid-template-columns: repeat(3, auto 1px) auto;
-  -ms-grid-columns: minmax(min-content, 1fr) 1px minmax(min-content, 1fr) 1px minmax(min-content, 1fr) 1px minmax(min-content, 1fr);
+  grid-template-columns: repeat( auto-fit, minmax(92px, 1fr) 1px);
   width: 100%;
   overflow: hidden;
   -ms-grid-column: 2;
