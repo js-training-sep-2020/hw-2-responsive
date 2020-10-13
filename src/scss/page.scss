@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(20, 44, 61, 0.75)), to(rgba(20, 44, 61, 0.75))), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(0, 0, 0, 0.4))), #2A2D3E no-repeat;
+  background: -o-linear-gradient(bottom, rgba(20, 44, 61, 0.75), rgba(20, 44, 61, 0.75)), -o-linear-gradient(top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #2A2D3E no-repeat;
+  background: linear-gradient(0deg, rgba(20, 44, 61, 0.75), rgba(20, 44, 61, 0.75)), linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), #2A2D3E no-repeat;
+}
+
+.page {
+  @include box-sizing(border-box);
+  margin: 0;
+
+  * {
+    @include box-sizing(border-box);
+  }
+}
+
+.page__widget-container {
+  display: flex;
+  width: 100%;
+  padding: 10%;
+  justify-content: center;
+}

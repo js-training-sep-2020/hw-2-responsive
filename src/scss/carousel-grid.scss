@@ -1,0 +1,144 @@
+@import "mixins";
+
+.carousel {
+  @include box-sizing(border-box);
+  @include grid;
+  grid-template-columns: auto 1fr auto;
+  -ms-grid-columns: auto 1fr auto;
+  -ms-grid-rows: auto;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+
+  * {
+    @include box-sizing(border-box);
+  }
+}
+
+.carousel_size_s {
+  padding: 8px 8px;
+  height: 94px;
+}
+
+.carousel__nav-arrows {
+  width: 16px;
+  line-height: 100%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.carousel__nav-arrows_left {
+  background: center no-repeat url("../img/icon_arrow_left.png");
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  margin-right: 16px;
+}
+
+.carousel__nav-arrows_right {
+  background: center no-repeat url("../img/icon_arrow_right.png");
+  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+  margin-left: 16px;
+}
+
+.carousel__forecast-container {
+  @include grid;
+  grid-template-columns: repeat( auto-fit, minmax(92px, 1fr) 1px);
+  width: 100%;
+  overflow: hidden;
+  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+}
+
+.carousel__daily-forecast {
+  -ms-grid-row: 1;
+  &:nth-child(1) {
+    -ms-grid-column: 1;
+  }
+  &:nth-child(3) {
+    -ms-grid-column: 3;
+  }
+  &:nth-child(5) {
+    -ms-grid-column: 5;
+  }
+  &:nth-child(7) {
+    -ms-grid-column: 7;
+  }
+}
+
+.carousel__divider {
+  width: 0;
+  line-height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  -ms-grid-row: 1;
+  &:nth-child(2) {
+    -ms-grid-column: 2;
+  }
+  &:nth-child(4) {
+    -ms-grid-column: 4;
+  }
+  &:nth-child(6) {
+    -ms-grid-column: 6;
+  }
+}
+
+.carousel__day-of-week {
+  padding: 0 4px 0;
+}
+
+.carousel__temperature {
+  padding: 0 0 0 8px;
+}
+
+.weather-icon_size_s {
+  width: 40px;
+  height: 30px;
+}
+
+.carousel__weather-icon {
+  margin: 8px auto;
+}
+
+.weather-icon__rain {
+  background: url("../img/icon_weather_rain.png");
+  background-size: cover;
+}
+
+.weather-icon__cloudy {
+  background: url("../img/icon_weather_cloudy.png");
+  background-size: cover;
+}
+
+.weather-icon__sunny {
+  background: url("../img/icon_weather_sunny.png");
+  background-size: cover;
+}
+
+.weather-icon__overcast {
+  background: url("../img/icon_weather_overcast.png");
+  background-size: cover;
+}
+
+// For the medium widget
+
+@media only screen and (min-width: 481px) {
+  .carousel_size_m {
+    height: 108px;
+    padding: 10px 24px;
+  }
+
+  .weather-icon {
+    width: 48px;
+    height: 36px;
+  }
+}
+
+// For the large (original) widget
+
+@media only screen and (min-width: 1280px) {
+  .carousel_size_l {
+    height: 108px;
+    padding: 10px 52px;
+  }
+}
+
