@@ -1,0 +1,199 @@
+
+/* font-face */
+@font-face {
+    font-family: AvenirNext;
+    src: url(../assets/fonts/AvenirNext.ttf);
+}
+
+
+/* common */
+
+body {
+    font-size: 18px;
+    font-family: AvenirNext;
+    color: #fff;
+}
+
+/* out widget styles */
+
+.cubes-section {
+    width: 100%;
+    background: {
+        image: url(../assets/img/bg-image.png);
+        repeat: no-repeat;
+        size: cover;
+    };
+    box-sizing: border-box; 
+    padding: {
+        top: 200px;
+        bottom: 200px;
+    }
+}
+
+
+/*****************/
+/* widget */
+
+.widget {
+    width: 600px;
+    @media screen and (max-width: 800px) {
+        width: 300px;
+    }
+    margin: 0 auto;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+                .widget-item-wrap {
+                    flex-basis: 1/3*100%;
+                    @media screen and (max-width: 1000px) {
+                        flex-basis: 1/2*100%;
+                    }
+                    @media screen and (max-width: 800px) {
+                        flex-basis: 1*100%;
+                    }
+                    height: 205px;
+                        .widget-item {
+                            height: 100%;
+                            cursor: pointer;
+                            position: relative;
+                            overflow: hidden;
+                                /* start setting background and icon colors */
+                                &_chicago {
+                                    background-color: #69bee0;
+                                    .widget-item__icon {
+                                        background-image: url(../assets/img/CRAlt.png);    
+                                    }
+                                }
+                                &_seattle  {
+                                    background-color: #8dd79a;
+                                    .widget-item__icon {
+                                        background-image: url(../assets/img/Fog.png);    
+                                    }
+                                }
+                                &_brooklyn {
+                                    background-color: #6e59f4;
+                                    .widget-item__icon {
+                                        background-image: url(../assets/img/CS.png);    
+                                    }
+                                }
+                                &_portland  {
+                                    background-color: #dec057;
+                                    .widget-item__icon {
+                                        background-image: url(../assets/img/CSS.png);    
+                                    }
+                                }
+                                &_new-york {
+                                    background-color: #c85777;
+                                    .widget-item__icon {
+                                        background-image: url(../assets/img/CWM.png);    
+                                    }
+                                }
+                                &_san-jose  {
+                                    background-color: #b56fd2;
+                                    .widget-item__icon {
+                                        background-image: url(../assets/img/Cloud.png);    
+                                    }
+                                }
+                                /* finish setting background and icon colors */
+                        
+                                &__icon {
+                                    width: 90px;
+                                    height: 90px;
+                                    background: {
+                                        repeat: no-repeat;
+                                        position: center;
+                                    }
+                                    margin: {
+                                        left: auto;
+                                        right: auto;
+                                        bottom: 15px;
+                                        top: 30px;
+                                    }
+                                    transition: {
+                                        property: transform;
+                                        duration: 0.5s;
+                                    }
+                                }
+                        
+                                &__info {
+                                    width: 70%;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                
+                                /* four-day forecast */
+                                &__forecast {
+                                    position: absolute;
+                                    bottom: -100%;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 50%;
+                                    background-color: rgba(0, 0, 0, 0.37);
+                                    font-size: 12px;
+                                    text-align: center;
+                                    box-sizing: border-box;
+                                    padding: 0 10px;
+                                    transition: {
+                                        property: bottom;
+                                        duration: 0.5s;
+                                    }
+                                    visibility: hidden;
+                                        .widget-item__day {
+                                            float: left;
+                                            width: 25%;
+                                            padding-top: 25px;
+                                                &-icon {
+                                                    width: 32px;
+                                                    height: 30px;
+                                                    background: {
+                                                        repeat: no-repeat;
+                                                        position: center;
+                                                        size: 100% auto;
+                                                    }
+                                                    margin: 0 auto;
+                                                }
+                                                &:nth-child(1) {
+                                                    .widget-item__day-icon {
+                                                        background-image: url(../assets/img/CRAlt.png);
+                                                    }
+                                                }
+                                                &:nth-child(2) {
+                                                    .widget-item__day-icon {
+                                                        background-image: url(../assets/img/CRAlt.png);
+                                                    }
+                                                }
+                                                &:nth-child(3) {
+                                                    .widget-item__day-icon {
+                                                        background-image: url(../assets/img/Cloud.png);
+                                                    }
+                                                }
+                                                &:nth-child(4) {
+                                                    .widget-item__day-icon {
+                                                        background-image: url(../assets/img/CS.png);
+                                                    }
+                                                }
+                                                & * {
+                                                    margin-bottom: 5px;
+                                                }
+                                        }
+                                }
+                                /* hover styles */
+                                &:hover {
+                                    .widget-item__forecast {
+                                        display: block;
+                                        visibility: visible;
+                                        bottom: 0;
+                                    }
+
+                                    .widget-item__info {
+                                        visibility: hidden;
+                                    }
+
+                                    .widget-item__icon {
+                                        transform: scale(0.6) translateY(-20px);
+                                    }
+                                }
+                        }
+                }
+        }
+}
