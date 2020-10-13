@@ -1,40 +1,39 @@
 @import "_variablesForMedia";
 @media all and (min-width: 1680px) {
   .weather-widget {
-    font-size: 2.5vh;
-
-    max-width: 70rem;
-    max-height: 50rem;
+    font-size: $FONTSFORBIGSCREEN;
+    max-width: $WIDTHFORBIGSCREEN;
+    max-height: $HEIGHTFORBIGSCREEN;
     &__block {
-      width: 33.3%;
-      height: 50%;
+      width: $WIDTHBLOCKFORBIGSCREEN;
+      height: $HEIGHTBLOCKFORBIGSCREEN;
     }
     &__item {
-      font-size: 2vh;
+      font-size: $FONTSFORBIGSCREENITEM;
       & img {
-        height: 3vh;
+        height: $HEIGHTFORBIGSCREENITEM;
       }
     }
     &__img img {
-      height: 11vh;
+      height: $HEIGHTFORBIGSCREENIMG;
     }
   }
 }
 
 @media all and (max-width: 1024px) and (min-width: 616px) {
   .weather-widget {
-    font-size: 3vh;
+    font-size: $FONTSFORBIGSCREEN;
     margin: $MARGINFORSMALLSCREEN;
     max-height: $HEIGHTFORSMALLSCREEN;
-    max-width: 100vw;
+    max-width: $WIDTHFORSMALLSCREEN;
     &__block {
       width: $WIDTHBLOCKFORSMALLSCREEN;
       height: auto;
     }
     &__item {
-      font-size: 2vh;
+      font-size: $FONTSFORBIGSCREENITEM;
       & img {
-        height: 3vh;
+        height: $HEIGHTFORBIGSCREENITEM;
       }
     }
     &__img img {
@@ -57,8 +56,5 @@
 @media all and (max-width: 450px) {
   .weather-widget {
     font-size: $FONTSFORSMALLSCREEN;
-    &__item {
-      font-size: 1.5vh;
-    }
   }
 }
