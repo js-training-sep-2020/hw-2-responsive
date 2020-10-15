@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/mini-css-extract-plugin/dist/loader.js?!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/styleFlex.scss":
+/***/ "../node_modules/mini-css-extract-plugin/dist/loader.js?!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/styleGrid.scss":
 /*!*******************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-1!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/styleFlex.scss ***!
+  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-1!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/styleGrid.scss ***!
   \*******************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n    if(false) { var cssReload; }\n  \n\n//# sourceURL=webpack:///./styles/styleFlex.scss?../node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-1!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js");
+eval("// extracted by mini-css-extract-plugin\n    if(false) { var cssReload; }\n  \n\n//# sourceURL=webpack:///./styles/styleGrid.scss?../node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-1!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -117,7 +117,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/reset.css */ \"./styles/reset.css\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_styleFlex_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styleFlex.scss */ \"./styles/styleFlex.scss\");\n/* harmony import */ var _styles_styleFlex_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styleFlex_scss__WEBPACK_IMPORTED_MODULE_1__);\n\r\n// import './styles/style.css';\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/reset.css */ \"./styles/reset.css\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_styleGrid_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styleGrid.scss */ \"./styles/styleGrid.scss\");\n/* harmony import */ var _styles_styleGrid_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_styleGrid_scss__WEBPACK_IMPORTED_MODULE_1__);\n\r\n// import './styles/style.css';\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -132,14 +132,14 @@ eval("// extracted by mini-css-extract-plugin\n    if(false) { var cssReload; }\
 
 /***/ }),
 
-/***/ "./styles/styleFlex.scss":
+/***/ "./styles/styleGrid.scss":
 /*!*******************************!*\
-  !*** ./styles/styleFlex.scss ***!
+  !*** ./styles/styleGrid.scss ***!
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-1!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./styleFlex.scss */ \"../node_modules/mini-css-extract-plugin/dist/loader.js?!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/styleFlex.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./styles/styleFlex.scss?");
+eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-1!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./styleGrid.scss */ \"../node_modules/mini-css-extract-plugin/dist/loader.js?!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./styles/styleGrid.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./styles/styleGrid.scss?");
 
 /***/ })
 

@@ -1,5 +1,5 @@
 import './styles/reset.css';
 // import './styles/style.css';
-import './styles/styleFlex.scss';
+import './styles/styleGrid.scss';
 
 

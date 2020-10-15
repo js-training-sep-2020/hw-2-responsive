@@ -76,17 +76,16 @@ body {
     .widget {
       width: 300px; } }
   .widget .container {
-    display: flex;
-    flex-wrap: wrap; }
+    display: grid;
+    grid-template-columns: 33.33333% 33.33333% 33.33333%; }
+    @media screen and (max-width: 1000px) {
+      .widget .container {
+        grid-template-columns: 50% 50%; } }
+    @media screen and (max-width: 800px) {
+      .widget .container {
+        grid-template-columns: 100%; } }
     .widget .container .widget-item-wrap {
-      flex-basis: 33.33333%;
       height: 205px; }
-      @media screen and (max-width: 1000px) {
-        .widget .container .widget-item-wrap {
-          flex-basis: 50%; } }
-      @media screen and (max-width: 800px) {
-        .widget .container .widget-item-wrap {
-          flex-basis: 100%; } }
       .widget .container .widget-item-wrap .widget-item {
         height: 100%;
         cursor: pointer;
