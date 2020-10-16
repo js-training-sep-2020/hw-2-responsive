@@ -1,0 +1,77 @@
+@import "_variables-for-media";
+
+@media all and (min-width: 1680px) {
+  .weather-widget {
+    font-size: $FONTSFORBIGSCREEN;
+    max-width: $WIDTHFORBIGSCREEN;
+    max-height: $HEIGHTFORBIGSCREEN;
+    &__img img {
+      height: $HEIGHTFORBIGSCREENIMG;
+    }
+  }
+  .weather-list {
+    &__text {
+      font-size: $FONTSFORBIGSCREENITEM;
+    }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENITEM;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .weather-widget {
+    font-size: $FONTSFORBIGSCREEN;
+    max-width: $WIDTHFORSMALLSCREEN;
+    max-height: $HEIGHTFORSMALLSCREEN;
+    grid-template-rows: $GRIDROWS;
+    grid-template-columns: $GRIDCOLUMNS;
+
+    &__block {
+      &_first {
+        -ms-grid-column: $GRIDCOLUMNFIRST;
+        -ms-grid-row: $GRIDROWFIRST;
+      }
+      &_second {
+        -ms-grid-column: $GRIDCOLUMNSECOND;
+        -ms-grid-row: $GRIDROWFIRST;
+      }
+      &_third {
+        -ms-grid-column: $GRIDCOLUMNFIRST;
+        -ms-grid-row: $GRIDROWSECOND;
+      }
+      &_fourth {
+        -ms-grid-column: $GRIDCOLUMNSECOND;
+        -ms-grid-row: $GRIDROWSECOND;
+      }
+      &_fifth {
+        -ms-grid-column: $GRIDCOLUMNFIRST;
+        -ms-grid-row: $GRIDROWTHIRD;
+      }
+      &_sixth {
+        -ms-grid-column: $GRIDCOLUMNSECOND;
+        -ms-grid-row: $GRIDROWTHIRD;
+      }
+    }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENIMG;
+    }
+  }
+  .weather-list {
+    &__text {
+      font-size: $FONTSFORBIGSCREENITEM;
+    }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENITEM;
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .weather-widget {
+    font-size: $FONTSFORSMALLSCREEN;
+  }
+  .weather-list__text {
+    font-size: $FONTSFORSMALLSCREENITEM;
+  }
+}

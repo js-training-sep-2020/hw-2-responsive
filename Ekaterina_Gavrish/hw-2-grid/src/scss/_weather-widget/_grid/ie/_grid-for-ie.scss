@@ -1,0 +1,91 @@
+@import "_variables-for-ie";
+
+.weather-widget {
+  &__block {
+    grid-template-columns: $GRIDCOLUMNSBLOCK;
+    -ms-grid-rows: $GRIDROWSBLOCK;
+    &_first {
+      -ms-grid-column: $GRIDCOLUMNFIRST;
+      -ms-grid-row: $GRIDROWFIRST;
+    }
+    &_second {
+      -ms-grid-column: $GRIDCOLUMNSECOND;
+      -ms-grid-row: $GRIDROWFIRST;
+    }
+    &_third {
+      -ms-grid-column: $GRIDCOLUMNTHIRD;
+      -ms-grid-row: $GRIDROWFIRST;
+    }
+    &_fourth {
+      -ms-grid-column: $GRIDCOLUMNFIRST;
+      -ms-grid-row: $GRIDROWSECOND;
+    }
+    &_fifth {
+      -ms-grid-rows: $GRIDROWSBLOCKFORFIFTH;
+      -ms-grid-column: $GRIDCOLUMNSECOND;
+      -ms-grid-row: $GRIDROWSECOND;
+    }
+    &_sixth {
+      -ms-grid-column: $GRIDCOLUMNTHIRD;
+      -ms-grid-row: $GRIDROWSECOND;
+    }
+  }
+
+  &__img {
+    -ms-grid-row: $GRIDROWFIRST;
+    -ms-grid-row-align: end;
+  }
+
+  &__text,
+  &__list {
+    -ms-grid-row: $GRIDROWTHIRD;
+  }
+
+  &__list {
+    -ms-grid-rows: $GRIDROWSUL;
+  }
+
+  &__list,
+  &__text,
+  &__img {
+    -ms-grid-column-align: center;
+  }
+}
+.weather-list {
+  &__item {
+    -ms-grid-rows: $GRIDROWSLI;
+    grid-template-columns: $GRIDCOLUMNSLI;
+    &:nth-child(1) {
+      -ms-grid-column: $GRIDCOLUMNSECOND;
+    }
+    &:nth-child(2) {
+      -ms-grid-column: $GRIDCOLUMNTHIRD;
+    }
+    &:nth-child(3) {
+      -ms-grid-column: $GRIDCOLUMNFOURTH;
+    }
+    &:nth-child(4) {
+      -ms-grid-column: $GRIDCOLUMNFIFTH;
+    }
+  }
+
+  &__text {
+    &:nth-child(1) {
+      -ms-grid-row: $GRIDROWFIRST;
+      -ms-grid-row-align: end;
+    }
+    &:nth-child(3) {
+      -ms-grid-row: $GRIDROWFIFTH;
+    }
+  }
+
+  &__img {
+    -ms-grid-row: $GRIDROWTHIRD;
+  }
+
+  &__img,
+  &__text {
+    -ms-grid-column-align: center;
+    display: block;
+  }
+}

@@ -1,0 +1,60 @@
+@import "_variables-for-media";
+@media all and (min-width: 1680px) {
+  .weather-widget {
+    font-size: $FONTSFORBIGSCREEN;
+    max-width: $WIDTHFORBIGSCREEN;
+    max-height: $HEIGHTFORBIGSCREEN;
+    &__block {
+      width: $WIDTHBLOCKFORBIGSCREEN;
+      height: $HEIGHTBLOCKFORBIGSCREEN;
+    }
+    &__item {
+      font-size: $FONTSFORBIGSCREENITEM;
+      & img {
+        height: $HEIGHTFORBIGSCREENITEM;
+      }
+    }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENIMG;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) and (min-width: 616px) {
+  .weather-widget {
+    font-size: $FONTSFORBIGSCREEN;
+    margin: $MARGINFORSMALLSCREEN;
+    max-height: $HEIGHTFORSMALLSCREEN;
+    max-width: $WIDTHFORSMALLSCREEN;
+    &__block {
+      width: $WIDTHBLOCKFORSMALLSCREEN;
+      height: auto;
+    }
+    &__item {
+      font-size: $FONTSFORBIGSCREENITEM;
+      & img {
+        height: $HEIGHTFORBIGSCREENITEM;
+      }
+    }
+    &__img img {
+      height: inherit;
+    }
+  }
+}
+
+@media all and (max-width: 615px) {
+  .weather-widget {
+    margin: $MARGINFORSMALLSCREEN;
+    max-height: $HEIGHTFORSMALLSCREEN;
+    &__block {
+      width: $WIDTHBLOCKFORSMALLSCREEN;
+      height: auto;
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .weather-widget {
+    font-size: $FONTSFORSMALLSCREEN;
+  }
+}

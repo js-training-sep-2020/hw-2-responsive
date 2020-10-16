@@ -1,0 +1,76 @@
+@import "_variables-for-ww";
+@import "_grid/gchrome-and-ff/_grid-for-gchrome-and-ff";
+@import "_grid/ie/_grid-for-ie";
+
+@font-face {
+  font-family: $FONTF;
+  src: $FONTFURL format("opentype");
+}
+
+@mixin backgrounds-and-transparency(
+  $color,
+  $tsColor,
+  $tsSize: $SHODOWSIZE,
+  $transparency: $SHODOWTRANSPARENCY
+) {
+  background-color: $color;
+  text-shadow: $tsSize rgba($tsColor, $transparency);
+}
+
+.wrapper {
+  width: $WIDTWRAPPER;
+  height: $HEIGHTWRAPPER;
+  background: $BGWRAPPER no-repeat center center fixed;
+  background-size: cover;
+}
+
+.weather-widget {
+  font-family: $FONTF;
+  font-size: $FONTSMEDIUM;
+  line-height: $LINEH;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $WHITE;
+  max-height: $HEIGHTWW;
+  width: $WIDTHFORIE;
+  max-width: $WIDTHWW;
+  box-shadow: $BOXSHADOWWW;
+  position: absolute;
+  margin: auto;
+  top: $TOPWW;
+  right: $RIGHTWW;
+  bottom: $BOTTOMWW;
+  left: $LEFTWW;
+
+  &__block {
+    box-shadow: $BOXSHADOWBLOCK;
+    &_first {
+      @include backgrounds-and-transparency($CYAN, $CYANFORSHODOW);
+    }
+    &_second {
+      @include backgrounds-and-transparency($GREENCYAN, $GREENCYANFORSHODOW);
+    }
+    &_third {
+      @include backgrounds-and-transparency($BLUE, $BLUEFORSHODOW);
+    }
+    &_fourth {
+      @include backgrounds-and-transparency($YELLOW, $YELLOWFORSHODOW);
+    }
+    &_fifth {
+      @include backgrounds-and-transparency($PINK, $PINKFORSHODOW);
+    }
+    &_sixth {
+      @include backgrounds-and-transparency($MAGENTA, $MAGENTAFORSHODOW);
+    }
+  }
+
+  &__list {
+    background-color: $DARKPINK;
+  }
+}
+
+.weather-list {
+  &__item {
+    font-size: $FONTSSMALL;
+  }
+}
