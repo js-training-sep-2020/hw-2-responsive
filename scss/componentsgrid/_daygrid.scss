@@ -1,0 +1,25 @@
+
+.day {
+  padding: 18px 32px 16px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  height: 112px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    height: 80%;
+    width: 1px;
+  }
+  &:last-child:after {
+    content: none;
+  }
+}
+  @media screen and (max-width: 768px) {
+    .day {
+      padding: 18px 5px 16px 5px;
+    }
+}
