@@ -1,5 +1,3 @@
-# ТОЛЬКО FLEX
-
 # Homework #2 css responsive
 
 ### Deadline 30.09

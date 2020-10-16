@@ -4,7 +4,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const loader = require('sass-loader');
 
 
 const isDev = process.env.NODE_ENV === 'development'; // defining the mode type: if "true" then dev
@@ -80,7 +79,6 @@ module.exports = {
                 test: /\.s[ac]ss$/,
                 use: 
                 [
-                    'style-loader',
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
