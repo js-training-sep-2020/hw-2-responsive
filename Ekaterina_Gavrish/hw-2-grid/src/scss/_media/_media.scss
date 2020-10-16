@@ -1,16 +1,28 @@
 @import "_variablesForMedia";
-@media all and (max-width: 450px) {
+
+@media all and (min-width: 1680px) {
   .weather-widget {
-    font-size: $FONTSFORSMALLSCREEN;
+    font-size: $FONTSFORBIGSCREEN;
+    max-width: $WIDTHFORBIGSCREEN;
+    max-height: $HEIGHTFORBIGSCREEN;
+    &__img img {
+      height: $HEIGHTFORBIGSCREENIMG;
+    }
   }
-  .weather-list__text {
-    font-size: $FONTSFORSMALLSCREENTEXT;
+  .weather-list {
+    &__text {
+      font-size: $FONTSFORBIGSCREENITEM;
+    }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENITEM;
+    }
   }
 }
 
-@media all and (max-width: 615px) {
+@media all and (max-width: 1024px) {
   .weather-widget {
-    margin: $MARGINFORSMALLSCREEN;
+    font-size: $FONTSFORBIGSCREEN;
+    max-width: $WIDTHFORSMALLSCREEN;
     max-height: $HEIGHTFORSMALLSCREEN;
     grid-template-rows: $GRIDROWS;
     grid-template-columns: $GRIDCOLUMNS;
@@ -41,5 +53,25 @@
         -ms-grid-row: $GRIDROWTHIRD;
       }
     }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENIMG;
+    }
+  }
+  .weather-list {
+    &__text {
+      font-size: $FONTSFORBIGSCREENITEM;
+    }
+    &__img img {
+      height: $HEIGHTFORBIGSCREENITEM;
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .weather-widget {
+    font-size: $FONTSFORSMALLSCREEN;
+  }
+  .weather-list__text {
+    font-size: $FONTSFORSMALLSCREENITEM;
   }
 }
